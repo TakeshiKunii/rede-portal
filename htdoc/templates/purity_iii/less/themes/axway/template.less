@@ -1,0 +1,3956 @@
+// All custom styles
+//** GENERAL ********
+//** UI COMPONENTS ********
+//---- HEADINGS
+//---- TABS
+//---- COLLAPSIBLE CONTAINERS
+//---- LINKS
+//---- BUTTONS
+//---- ERRORS, WARNINGS, OTHER MESSAGES
+//---- MODAL DIALOG
+//---- FORMS
+//------ Well (Bootstrap)
+//------ Inline help below fields
+//------ Form validation errors
+//------ Radio: remove bold label
+//---- TABLES
+//------ Tables: alternate row bg color beginning with white
+//------ Tables: replace sort icon
+//------ Responsive table
+//---- Footer
+//---- Main menu
+//---- DROP DOWN MENU
+//---- Daterangepicker
+//---- TAG FILTER
+//---- Highcharts
+//---- Recaptcha
+//---- Swagger UI
+//** PAGE-SPECIFIC ********
+//---- COMMON TOOLS
+//---- VIEW PROFILE
+//---- EDIT MY PROFILE
+//---- LOGIN
+//---- API CATALOG
+//---- API TEST
+//---- APPLICATION LIST
+//---- VIEW APPLICATION: DETAILS
+//------ Quota Dialog
+//---- CREATE APPLICATION
+//---- EDIT APPLICATION: AUTHENTICATION
+//---- EDIT APPLICATION: SHARING
+//---- MONITORING
+//---- DOCUMENTATION
+//---- HELP CENTER
+//---- HOMEPAGE (CAN BE REMOVED?)
+//** 3RD PARTY CONTENT ********
+//---- EasyBlog
+//---- EasyDiscuss?
+
+//** GENERAL ********
+// Temporary override body font-size to unify both bootstrap.css
+//  will investigate later
+
+body {
+  font-size: @aap-base-font-size;
+  font-family: @aap-base-font-family;
+  color: @aap-text-color;
+  background-color: @aap-bg-color;
+  margin: 0;
+  padding: 0;
+  padding-top: @aap-mainnav-height;
+}
+
+* {
+  font-family: 'Roboto';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   font-style: italic;
+}
+:-ms-input-placeholder {
+   font-style: italic;
+}
+
+[aria-hidden=true] {
+  display: none;
+}
+
+// Override Bootstrap
+//TODO: see if this can be specified in a different way (as a parameter)
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: @unit;
+  padding-right: @unit;
+}
+
+select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .inputbox:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#container {
+  background-color: transparent;
+  margin-bottom: @unit * 2;
+  width: auto !important;
+  border: 1px solid @aap-border-color;
+  border-top: 0 none;
+  padding-top: @unit * 3;
+  padding-bottom: @unit;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  svg {
+    width: 99%;
+  }
+}
+
+.panel {
+  background: transparent;
+}
+
+.t3-content {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Disabled text effect
+.disabled-text-effect {
+  color: @aap-disabled-text-color;
+}
+
+div.description {
+  line-height: 2em;
+  margin-bottom: 5px;
+}
+
+//** UI COMPONENTS ********
+
+//---- HEADINGS
+h1 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: @unit * 2;
+  font-size: @aap-page-title-font-size;
+  font-family: @aap-page-title-font-family;
+  color: @aap-page-title-color;
+  line-height: @aap-page-title-font-size * 1.5;
+}
+
+h2 {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: @aap-section-title-font-size;
+  text-transform: none;
+  color: @aap-section-title-color;
+}
+
+h3 {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: @aap-dialog-title-font-size;
+}
+
+.layout-default.task-submit,
+.view-login,
+.view-reset,
+.view-registration {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.subtitle {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: @aap-subtitle-font-size;
+  text-transform: initial;
+  font-weight: normal;
+  color: @aap-text-color;
+}
+
+.com_apiportal {
+  .head {
+    position: relative;
+    background-color: @aap-page-heading-background-color; // fallback if no image
+    background-image: @aap-page-heading-background-image;
+    background-size: cover;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:
+        linear-gradient(90deg,
+          fade(@aap-page-heading-left-color, @aap-page-heading-left-color-opacity),
+          fade(@aap-page-heading-right-color, @aap-page-heading-right-color-opacity)
+        );
+    }
+
+    h1,
+    h1 + p {
+      color: @white;
+      padding-left: @unit;
+      padding-right: @unit;
+      position: relative;
+    }
+
+    h1 + p {
+      padding-bottom: @unit * 2;
+    }
+
+    .btn-toolbar,
+    .action-group {
+      & + h1 {
+        padding-top: 0;
+      }
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .btn-toolbar {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0 none;
+      background-color: transparent;
+
+      a, button {
+        color: contrast(@brand-color);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .btn-default {
+        &.icon {
+          padding-left: @unit * 4;
+
+          &::before {
+            left: @unit;
+          }
+        }
+
+        &:hover, &:active, &:focus {
+          background: transparent;
+          color: contrast(@brand-color);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  h1,
+  h1 + p,
+  .body,
+  .auto,
+  #system-message-container {
+    margin: 0 auto;
+  }
+
+  .body {
+    padding: @unit * 4 @unit;
+  }
+
+  .btn-toolbar + .body {
+    padding-top: 0;
+  }
+}
+
+// Collapsible section text color
+.panel-title > a {
+  color: @aap-section-title-color;
+}
+
+//---- FONT ICONS
+
+.iconBaseCommon {
+  font-family: 'Axway-Common';
+  speak: none;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  &:before {
+    .iconBaseCommon;
+
+    position: absolute;
+    left: 10px;
+    // Use transform instead of font-size in percentage,
+    // because IE11 doubles it due to the duplicated css files - one for app and one for theme magic.
+    top: 50%;
+    transform: translate(0, -50%) scale(1.4);
+    -ms-transform: translate(0, -50%) scale(1.4);
+  }
+
+  &.add-circle:before {
+    content: '\e933';
+  }
+
+  &.send:before {
+    content: '\e918';
+  }
+
+  &.email:before {
+    content: '\e914';
+  }
+
+  &.attach:before {
+    content: '\e948';
+  }
+
+  &.save:before {
+    content: '\e903';
+  }
+
+  &.delete:before {
+    content: '\e905';
+  }
+
+  &.close:before {
+    content: '\e936';
+  }
+
+  &.pencil:before {
+    content: '\e904';
+  }
+
+  &.download:before {
+    content: '\e91c';
+  }
+
+  &.more:before {
+    line-height: 1;
+    content: '\e93c';
+    right: 0;
+  }
+
+  &.gear:before {
+    content: '\e902';
+  }
+
+  &.key:before {
+    content: '\e927';
+  }
+
+  &.lock:before {
+    content: '\e928';
+  }
+
+  &.logout:after {
+    content: '\e946';
+  }
+
+  &.folder:before {
+    content: '\e912';
+  }
+
+  &.sort:before {
+    content: '';
+    left: auto;
+  }
+
+  &.search::before {
+    content: '\e908';
+  }
+
+  &.user::before {
+    content: '\e906';
+  }
+
+  &.group::before {
+    content: '\e907';
+  }
+
+  &.arrow-left::before {
+    content: '\e941';
+  }
+
+  &.arrow-right::before {
+    content: '\e93f';
+  }
+
+  &.arrow-up::before {
+    content: '\e942';
+  }
+
+  &.arrow-down::before {
+    content: '\e940';
+  }
+
+  &.question-circle::before {
+    content: '\e938';
+  }
+
+  &.document-text::before {
+    content: '\e90f';
+  }
+
+  &.bubble-text::before {
+    content: '\e92c';
+  }
+
+  &.earth::before {
+    content: '\e943';
+  }
+
+  &.info-circle::before {
+    content: '\e934';
+  }
+
+  &.chevron-down::before {
+    content: '\e93c';
+  }
+
+  &.icons::before {
+    content: '\e944';
+  }
+
+  &.calendar::before {
+    content: '\e92a';
+  }
+
+  &.list::before {
+    font-family: 'Axway-SecureTransport';
+    content: '\e912';
+  }
+
+  &.tiles[aria-pressed=false]::before {
+    content: "\e944";
+  }
+
+  &.tiles[aria-pressed=true]::before {
+    font-family: 'Axway-SecureTransport';
+    content: "\e912";
+  }
+
+  &.metrics::before {
+    font-family: 'Axway-Engage';
+    content: "\e905";
+  }
+}
+
+//---- TABS
+
+// Tabs: same label color between active and inactive
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus,
+.nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+  color: @aap-navtab-color;
+}
+
+.nav-tabs {
+  border-bottom-color: @aap-primary-button-bg-color;
+  padding-top: @unit * 2;
+
+  > li {
+    margin-right: @unit;
+    z-index: 1;
+    margin-bottom: 0;
+    > a {
+      padding: @unit @unit * 2;
+      font-size: @aap-navtab-font-size;
+      color: @aap-primary-button-bg-color;
+      border: 1px solid transparent;
+      border-bottom: 0 none;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background-color: transparent;
+      text-transform: inherit;
+      transition: all 0.2s ease 0s;
+      &:hover {
+        border: 1px solid @aap-primary-button-bg-color;
+        border-bottom: 0 none;
+        background-color: @aap-primary-button-text-color;
+        color: @aap-primary-button-bg-color;
+        transition-duration: 0s;
+      }
+    }
+    &.disabled {
+      > a, > a:hover, > a:focus {
+        background-color: @aap-navtab-disabled-bg-color;
+        color: @aap-navtab-disabled-color;
+      }
+    }
+    &.active {
+      z-index: 0;
+      > a, > a:hover, > a:focus {
+        background-color: @aap-primary-button-bg-color;
+        border: 1px solid @aap-primary-button-bg-color;
+        color: contrast(@aap-primary-button-bg-color);
+      }
+    }
+    &:first-child {
+      // Add extra h-rule left of first tab
+      margin-left: @unit * 2;
+    }
+  }
+}
+
+//---- COLLAPSIBLE CONTAINERS
+// main div
+.com_apiportal .panel-default {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  // header bar
+  .panel-heading {
+    border: 0;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // content div
+  .panel-body {
+    padding: 0 0 0 20px;
+
+    > a.btn, > button {
+      margin-bottom: 8px;
+    }
+  }
+
+}
+
+//---- LINKS
+a {
+  color: @aap-link-color;
+  &:hover {
+    text-decoration: underline;
+    color: @aap-link-hover-color;
+    transition-duration: 0s;
+  }
+  &:focus {
+    color: @aap-link-selected-color;
+  }
+}
+
+// Disabled text effect for <a/> links
+a:link.disabled-text-effect,
+a:visited.disabled-text-effect,
+a:hover.disabled-text-effect,
+a:active.disabled-text-effect {
+  color: @aap-link-disabled-color;
+  text-decoration: none;
+}
+
+//---- BUTTONS
+
+// Normal button style (gray)
+.btn-default {
+  border-color: @aap-button-border-color;
+  background-color: @aap-button-bg-color;
+  color: @aap-button-text-color;
+  font-size: @aap-button-font-size;
+  transition: all 0.2s ease 0s;
+  &:hover, &:focus {
+    border-color: @aap-button-hover-border-color;
+    background-color: @aap-button-hover-bg-color;
+    color: @aap-button-hover-text-color;
+    transition-duration: 0s;
+  }
+  &[disabled] {
+    border-color: @aap-button-disabled-border-color;
+    background-color: @aap-button-disabled-bg-color;
+    color: @aap-button-disabled-text-color;
+    transition-duration: 0s;
+  }
+  &:active, &.active, .open &.dropdown-toggle {
+    border-color: @aap-button-selected-border-color;
+    background-color: @aap-button-selected-bg-color;
+    color: @aap-button-selected-text-color;
+    transition-duration: 0s;
+  }
+}
+
+.btn,
+.btn-default {
+  .border-radius(@unit * 3);
+
+  &.icon {
+    position: relative;
+    padding-left: @unit * 5;
+  }
+}
+
+.edit-options .btn-default,
+.header-bar .btn-default,
+.btn-toolbar .btn-default,
+.btn-group .btn-default,
+.action-group .btn-default,
+.dataTables_wrapper .btn-default {
+  border-color: transparent;
+  background-color: transparent;
+  color: @aap-primary-button-bg-color;
+  //font-size: @aap-base-font-size - 1px;
+  &:hover, &:focus {
+    border-color: @aap-primary-button-bg-color;
+    background-color: @aap-primary-button-bg-color;
+    color: contrast(@aap-primary-button-bg-color);
+    transition-duration: 0s;
+  }
+  &[disabled] {
+    border-color: transparent;
+    background-color: transparent;
+    color: @aap-link-disabled-color;
+    transition-duration: 0s;
+  }
+  &:active, &.active, .open &.dropdown-toggle {
+    border-color: @aap-button-border-color;
+    background-color: transparent;
+    color: @aap-link-color;
+    transition-duration: 0s;
+  }
+}
+
+// Primary button style (colorBlueSteel)
+.btn-primary {
+  border-color: @aap-primary-button-border-color;
+  background-color: @aap-primary-button-bg-color;
+  color: @aap-primary-button-text-color;
+  font-size: @aap-button-font-size;
+  transition: all 0.2s ease 0s;
+  &:hover, &:focus {
+    border-color: @aap-primary-button-hover-border-color;
+    background-color: @aap-primary-button-hover-bg-color;
+    color: @aap-primary-button-hover-text-color;
+    transition-duration: 0s;
+  }
+  &[disabled] {
+    border-color: @aap-primary-button-disabled-border-color;
+    background-color: @aap-primary-button-disabled-bg-color;
+    color: @aap-primary-button-disabled-text-color;
+    transition-duration: 0s;
+  }
+  &:active, &.active, .open &.dropdown-toggle {
+    border-color: @aap-primary-button-selected-border-color;
+    background-color: @aap-primary-button-selected-bg-color;
+    color: @aap-primary-button-selected-text-color;
+    transition-duration: 0s;
+  }
+}
+
+// Style form Cancel buttons as default buttons (see Edit Profile page)
+button[type=submit] + .btn {
+  .btn-default;
+}
+
+.btn .caret {
+  margin-left: 8px;
+}
+
+// Eliminate Bootstrap's "not-allowed" cursor
+.btn {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: initial;
+  }
+}
+
+// Date range button: Eliminate shadow when active
+.btn {
+  &:active {
+    box-shadow: none;
+  }
+  &.active {
+    box-shadow: none;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}
+
+//---- ERRORS, WARNINGS, OTHER MESSAGES
+
+.alert {
+  border-radius: 0;
+  padding: 10px 14px;
+}
+
+.alert p:last-of-type {
+  margin-bottom: 0px;
+}
+
+.alert,
+.alert-notice {
+  color: @aap-text-color;
+  background-color: @info-bg-color;
+  border-color: @info-border-color;
+}
+
+.alert-error {
+  color: @aap-text-color;
+  background-color: @error-bg-color;
+  border-color: @error-border-color;
+}
+
+.alert-warning {
+  color: @aap-text-color;
+  background-color: @warning-bg-color;
+  border-color: @warning-border-color;
+}
+
+.alert-success {
+  color: @aap-text-color;
+  background-color: @success-bg-color;
+  border-color: @success-border-color;
+}
+
+//---- MODAL DIALOG
+
+.modal-dialog {
+  .modal-content {
+    border-radius: 0.385rem;
+    padding: @unit * 4;
+    background: @page-color;
+    -webkit-box-shadow: 0 0 @unit * 2 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 @unit * 2 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-title {
+    font-size: @aap-dialog-title-font-size;
+    font-weight: bold;
+  }
+
+  .modal-header {
+    padding: 0 0 @unit * 2 0;
+    margin-bottom: @unit * 2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .modal-body {
+    padding: @unit * 2 0;
+    overflow-y: auto;
+    // Ideally the dialog would be sized up to the height of the screen. This value doesn't guarantee that the dialog will fit on screen neither.
+    max-height: 500px;
+  }
+
+  div.modal-body div.form-group label {
+    padding-left: 0px;
+  }
+
+  .modal-footer {
+    margin-top: 0;
+    border-top: 0 none;
+    padding: @unit * 2 0;
+
+    .dialog-actions {
+      float: right;
+    }
+  }
+
+  .close {
+    font-size: @unit * 4;
+    font-weight: normal;
+    margin-top: 0;
+    opacity: 0.7;
+  }
+
+  .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Bootstrap adds 16px to body when a modal is opened
+// We have the main nabigation fixed on top, so we need the same padding to prevent jumping
+.modal-open .t3-mainnav {
+  padding-right: 16px;
+}
+
+//---- FORMS
+
+form {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Override bootstrap style
+label {
+  font-weight: normal;
+}
+
+//------ Well (Bootstrap)
+.well {
+  @well-border-color: lighten(@aap-box-border-color, 6%);
+  @well-background-color: lighten(@aap-box-border-color, 14%);
+  border: 1px solid @well-border-color;
+  background-color: @well-background-color;
+  border-radius: 3px !important;
+  box-shadow: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  .portfolio {
+    margin-right: 15px;
+    max-width: 96px;
+    padding: 0;
+    background: none transparent;
+  }
+}
+
+//------ Inline help below fields
+.help-block, span.optional {
+  font-size: smaller;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: mix(@page-text-color, contrast(@page-text-color), 60%);
+}
+
+// Override Bootstrap styles
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.inputbox,
+.form-control {
+  border-color: @aap-field-border-color;
+  background-color: @aap-field-bg-color;
+  color: @aap-text-color;
+  box-shadow: none;
+  .border-radius(3px);
+  &:focus {
+    &:hover {
+      border-color: @aap-focus-color;
+    }
+    border-color: @aap-focus-color;
+    //.focusGlowEffect();
+  }
+  &:hover {
+    border-color: @aap-field-hover-border-color;
+  }
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    border-color: @aap-field-disabled-border-color;
+    background-color: @aap-field-disabled-bg-color;
+    color: @aap-field-disabled-text-color;
+  }
+}
+
+.form-actions {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+// Eliminate Bootstrap's "not-allowed" cursor
+.form-control {
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: initial;
+  }
+}
+
+//------ Form validation errors
+
+label.error {
+  color: @error-label-color;
+  margin-bottom: 0px;
+}
+
+.validation-message {
+  min-width: 400px;
+}
+
+label.warning {
+  margin-bottom: 0px;
+}
+
+.value-changed-message {
+  min-width: 400px;
+}
+
+//------ Radio: remove bold label
+.radio-inline label {
+  font-weight: normal;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  top: 50%;
+  margin-top: 1px;
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+//------ Switch toggles
+.switch-toggle {
+  // Interaction is done with labels only.
+  // Labels are assumed to follow the input they are linked to.
+  input {
+    display: none;
+  }
+
+  label {
+    line-height: normal;
+    padding: 8px;
+    float: left;
+    border: 1px solid @aap-border-color;
+    border-left-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+  }
+
+  input[disabled] + label {
+    border-color: transparent;
+    color: @aap-disabled-border-color;
+    cursor: initial;
+  }
+
+  label:first-of-type {
+    border-radius: 5px 0 0 5px;
+    border-left-width: 1px;
+    margin-left: 0;
+  }
+
+  label:last-of-type {
+    border-radius: 0 5px 5px 0;
+  }
+
+  @tag-selected-bg-color: @aap-primary-button-bg-color;
+  input:checked + label {
+    background-color: fade(@tag-selected-bg-color, 90%);
+    border-color: @tag-selected-bg-color;
+    color: contrast(@tag-selected-bg-color);
+    border-left-width: 1px;
+    margin-left: -1px;
+
+  }
+  input:checked + label:first-of-type {
+    margin-left: 0;
+  }
+
+  input[disabled]:checked + label {
+    border-color: @aap-disabled-border-color;
+    background-color: @aap-disabled-bg-color;
+    color: @aap-text-color;
+  }
+}
+
+.shared-user-edit, .shared-user-name {
+  line-height: 35px;
+}
+
+// view mode sharing toggles
+.shared-user-view .switch-toggle,
+.shared-user-edit .switch-toggle {
+  input[disabled] + label {
+    display: none;
+    &:before {
+      content: "Can ";
+    }
+  }
+  input[disabled]:checked + label {
+    display: initial;
+    border-color: transparent;
+    background-color: transparent;
+    color: @aap-text-color;
+  }
+}
+
+//---- TABLES
+
+// must be table class otherwise Bootstrap's selector has higher precedence
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th,
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  vertical-align: middle;
+}
+
+table.table-striped th {
+  background-color: @aap-th-bg-color;
+  color: @aap-th-text-color;
+
+}
+
+.panel > .table-bordered, .panel > .table-responsive > .table-bordered,
+table.dataTable,
+.table-bordered {
+  border: 1px solid transparent;
+  border-collapse: collapse;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  & > thead {
+    background-color: @aap-th-bg-color;
+    border-bottom: 1px solid @aap-th-bg-color;
+    & > tr {
+      color: @aap-th-text-color;
+      border-top: 1px solid @aap-th-bg-color;
+      border-bottom: 1px solid @aap-th-bg-color;
+      & > th, & > td {
+        font-weight: normal;
+        padding-left: 10px;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom: 1px solid @aap-th-bg-color;
+        &.tablesorter-header:hover,
+        &.sorting:hover {
+          color: @aap-th-hover-text-color;
+          background-color: @aap-th-hover-bg-color;
+          border-top: 1px solid @aap-th-hover-bg-color;
+          border-bottom: 1px solid @aap-th-hover-bg-color;
+          cursor: pointer;
+          .fa-inverse {
+            color: @aap-th-hover-text-color;
+          }
+        }
+        // &.tablesorter-headerAsc,  // selected state is not display to not draw to much attention
+        // &.tablesorter-headerDesc, // idem
+        //&.tablesorter-headerAsc:hover, // idem
+        //&.tablesorter-headerDesc:hover, // idem
+        &.sorting_asc,
+        &.sorting_desc {
+          color: @aap-th-selected-text-color;
+          font-weight: 700;
+          background: @aap-th-selected-bg-color;
+          border-top: 1px solid @aap-th-selected-bg-color !important;
+          border-bottom: 1px solid @aap-th-selected-bg-color;
+          .fa-inverse {
+            color: @aap-th-selected-text-color;
+          }
+        }
+      }
+    }
+
+  }
+  & > tbody, & > tfoot {
+    color: @aap-tr-text-color;
+    > tr {
+      > td, > th {
+        padding-left: 10px;
+        border: 1px solid @aap-table-border-color;
+        border-width: 1px 0 1px 0;
+        &.disabled-text-effect {
+          color: @aap-tr-disabled-text-color;
+        }
+      }
+      &.selectable:hover > td:not(.disabled-text-effect) {
+        background: @aap-tr-hover-bg-color;
+        color: @aap-tr-hover-text-color;
+      }
+      &.active > td,
+      &.highlight > td {
+        background: @aap-tr-selected-bg-color;
+        color: @aap-tr-selected-text-color;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+table.dataTable thead th {
+  padding: 5px 18px;
+  font-size: @aap-base-font-size - 1px;
+}
+
+//------ Tables: alternate row bg color beginning with white
+.table-striped > tbody > tr:nth-child(2n+1) > td,
+.table-striped > tbody > tr:nth-child(2n+1) > th,
+.dataTable > tbody > tr:nth-child(2n+1) > td,
+.dataTable > tbody > tr:nth-child(2n+1) > th {
+  background-color: @aap-tr-odd-bg-color;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td,
+.table-striped > tbody > tr:nth-child(2n) > th,
+.dataTable > tbody > tr:nth-child(2n) > td,
+.dataTable > tbody > tr:nth-child(2n) > th {
+  background-color: @aap-tr-even-bg-color;
+}
+
+//------ Tables: replace sort icon
+table.dataTable thead > tr > th {
+  padding-right: 10px;
+}
+
+table.dataTable th.sorting {
+  background-image: none;
+}
+
+.dataTable th.sorting_desc,
+.table th.headerSortDown {
+  background-image: none;
+}
+
+.dataTable th.sorting_desc::after,
+.table th.headerSortDown::after {
+  content: "\f0dd";
+  font-family: FontAwesome;
+  float: none;
+  font-size: 1em;
+  position: relative;
+  top: -2px;
+  left: 7px;
+  line-height: 0;
+}
+
+.dataTable th.sorting_asc,
+.table th.headerSortUp {
+  background-image: none;
+}
+
+.dataTable th.sorting_asc::after,
+.table th.headerSortUp::after {
+  content: "\f0de";
+  font-family: FontAwesome;
+  float: none;
+  font-size: 1em;
+  position: relative;
+  top: 4px;
+  left: 7px;
+  line-height: 0;
+}
+
+// Specific to dataTable
+.dataTables_wrapper .row {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.tablesorter-icon-desc {
+  float: right;
+  font-size: 1em;
+  position: relative;
+}
+
+.tablesorter-icon-asc {
+  float: right;
+  font-size: 1em;
+  position: relative;
+}
+
+//TODO: Temporary overriding some properties with important
+
+table.table-monitoring {
+  margin-bottom: 0;
+  thead, tr {
+    border: 1px solid @aap-navtab-border-color !important;
+  }
+  th {
+    background-color: @aap-navtab-bg-color;
+    color: @aap-navtab-color;
+    width: 20% !important;
+    border-bottom: 1px solid @aap-navtab-border-color !important;
+    border-right: 1px solid @aap-navtab-border-color !important;
+    &:first-child {
+      border-left: 1px solid @aap-navtab-border-color !important;
+    }
+    &:last-child {
+      border-right: 1px solid @aap-navtab-border-color !important;
+    }
+    .name, .details {
+      font-weight: normal;
+    }
+    &.arrow_box:after,
+    &.arrow_box:before {
+      display: none;
+    }
+    &.active {
+      background-color: @aap-navtab-selected-bg-color !important;
+      color: @aap-navtab-selected-color;
+      border-bottom: 1px solid transparent !important;
+      .details {
+        position: relative;
+        color: @aap-navtab-selected-color;
+        &:after {
+          border-color: @colorBlueSteel transparent transparent;
+          position: relative;
+          top: 49%;
+          z-index: 1;
+
+          border-image: none;
+          border-style: solid;
+          border-width: 10px;
+          content: " ";
+          height: 0;
+          left: 50%;
+          margin-left: -12px;
+          margin-top: -20px;
+          position: absolute;
+          top: 43px;
+          width: 0;
+        }
+      }
+    }
+    &:hover {
+      @event-hover-bg-color: @aap-navtab-hover-bg-color;
+      background-color: @event-hover-bg-color;
+      color: @aap-navtab-hover-color;
+    }
+  }
+  > caption + thead > tr:first-child > th,
+  > colgroup + thead > tr:first-child > th,
+  > thead:first-child > tr:first-child > th,
+  > caption + thead > tr:first-child > td,
+  > colgroup + thead > tr:first-child > td,
+  > thead:first-child > tr:first-child > td {
+    border-bottom: 0 none;
+  }
+}
+
+.table-monitoring-arrow-box {
+  //position: relative; // bug in Firefox causing background to cover border
+  //background: #88b7d5;
+  border: 1px solid #c2e1f5;
+}
+
+.table-monitoring-name {
+  white-space: nowrap;
+}
+
+.table-monitoring-value {
+  font-weight: bold;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.table-monitoring-details {
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+
+#dtable_wrapper {
+  // Show empty table message on left
+  .dataTables_empty {
+    text-align: left;
+  }
+  // Hide unused paging controls
+  .pagination {
+    .prev.disabled, .next.disabled {
+      // we don't want to change the layout of other controls when the ends are reached
+      visibility: hidden;
+      pointer-events: none;
+      cursor: initial;
+    }
+  }
+}
+
+td.appcontent:last-child a {
+  white-space: nowrap;
+}
+
+//------ Responsive table
+div.table-responsive {
+  border: 0 none;
+}
+
+//---- Footer
+.t3-copyright {
+  border-top: 1px solid @aap-footer-border-color;
+  padding: 22px 0;
+  background: @t3-footer-background;
+}
+
+.t3-footer {
+  position: relative;
+  z-index: 10;
+}
+
+.t3-copyright .copyright {
+  text-align: center;
+}
+
+.t3-mainbody {
+  min-height: 846px;
+}
+
+// Hide the gray bar above the footer
+.t3-navhelper {
+  background: @aap-bg-color;
+}
+
+.btn[title="Back to Top"] {
+  display: none;
+}
+
+//---- Main menu
+#t3-mainnav {
+  position: fixed;
+  height: @aap-mainnav-height;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Reduce menu height to 46px
+  .navbar-nav {
+    max-height: @aap-mainnav-height;
+  }
+  .navbar-nav > li > a,
+  .t3-navbar li > a {
+    line-height: @aap-mainnav-height;
+  }
+
+  // Override navbar.less uppercase (note: another uppercase is defined in navigation.less)
+  .navbar-nav > li > a {
+    text-transform: inherit;
+  }
+
+  // Hide Purity template logo
+  .logo-image {
+    display: none;
+  }
+
+  // Don't show blue background behind home logo in navbar
+  .t3-navbar li:first-of-type.current.active {
+    background: transparent;
+  }
+
+  & {
+    border: 0 none;
+    border-bottom: 1px solid #e7e7e7;
+    background: -moz-linear-gradient(top, @aap-mainnav-top-color 0, @aap-mainnav-bottom-color 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @aap-mainnav-top-color), color-stop(100%, @aap-mainnav-bottom-color));
+    background: -webkit-linear-gradient(top, @aap-mainnav-top-color 0, @aap-mainnav-bottom-color 100%);
+    background: -o-linear-gradient(top, @aap-mainnav-top-color 0, @aap-mainnav-bottom-color 100%);
+    background: -ms-linear-gradient(top, @aap-mainnav-top-color 0, @aap-mainnav-bottom-color 100%);
+    background: linear-gradient(top, @aap-mainnav-top-color 0, @aap-mainnav-bottom-color 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@aap-mainnav-bottom-color', endColorstr='@aap-mainnav-top-color')";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@aap-mainnav-top-color', endColorstr='@aap-mainnav-bottom-color')";
+  }
+
+  // Reduce height of submenu items
+  .mega-nav.level1 a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .t3-megamenu .mega-nav > li,
+  .t3-megamenu .mega-nav > li:first-child,
+  .t3-megamenu .dropdown-menu .mega-nav > li,
+  .t3-megamenu .dropdown-menu .mega-nav > li:first-child {
+    border-top: 0 none;
+    border-bottom: 0 none;
+
+  }
+
+  .t3-navbar .navbar-nav.level0 > li {
+    /*border-left: 1px solid @grayDarker;
+    border-right: 1px solid @black;*/
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 0 none;
+
+     &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      opacity: 1;
+      height: 4px;
+      background: @brand-color;
+      transition: all .35s;
+    }
+
+    &:first-of-type > a {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    ul.level1 {
+      padding: 5px 0;
+      li {
+        height: @aap-subnav-item-height;
+
+        > a {
+          height: @aap-subnav-item-height;
+          line-height: @aap-subnav-item-height;
+        }
+      }
+    }
+  }
+
+  //TODO: Might not be needed
+  .t3-navbar .level1 li {
+    border-right: 0 none;
+  }
+
+  .t3-navbar li > a {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .navbar-nav > li > a {
+    color: @aap-mainnav-text-color;
+    font-size: @aap-mainnav-font-size;
+    line-height: @aap-mainnav-height - 1;
+    font-weight: 700 !important;
+    font-family: @aap-mainnav-font-family;
+  }
+
+  .navbar-nav > .dropdown > a .caret {
+    border-top-color: @aap-mainnav-text-color;
+    border-bottom-color: @aap-mainnav-text-color;
+  }
+
+  .t3-navbar li:hover > a {
+    color: @aap-mainnav-hover-text-color;
+  }
+
+  .t3-navbar li:hover > a .caret {
+    border-top-color: @aap-mainnav-hover-text-color;
+  }
+
+  .t3-navbar li.active > a {
+    color: @aap-mainnav-selected-text-color;
+  }
+
+  .t3-navbar li.active > a .caret {
+    border-top-color: @aap-mainnav-selected-text-color;
+  }
+
+  // hover menu item inverted gray gradient
+  .t3-navbar ul.level0 > li:hover {
+    background: -moz-linear-gradient(bottom, @aap-mainnav-hover-bottom-color 0, @aap-mainnav-hover-top-color 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, @aap-mainnav-hover-bottom-color), color-stop(100%, @aap-mainnav-hover-top-color));
+    background: -webkit-linear-gradient(bottom, @aap-mainnav-hover-bottom-color 0, @aap-mainnav-hover-top-color 100%);
+    background: -o-linear-gradient(bottom, @aap-mainnav-hover-bottom-color 0, @aap-mainnav-hover-top-color 100%);
+    background: -ms-linear-gradient(bottom, @aap-mainnav-hover-bottom-color 0, @aap-mainnav-hover-top-color 100%);
+    background: linear-gradient(bottom, @aap-mainnav-hover-bottom-color 0, @aap-mainnav-hover-top-color 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@aap-mainnav-hover-top-color', endColorstr='@aap-mainnav-hover-bottom-color')";
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: -1px;
+      opacity: 1;
+      background: @brand-color;
+    }
+
+    &:first-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  // active menu item blue
+  .t3-navbar ul.level0 > li.active {
+    background: -moz-linear-gradient(bottom, @aap-mainnav-selected-bottom-color 0, @aap-mainnav-selected-top-color 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, @aap-mainnav-selected-bottom-color), color-stop(100%, @aap-mainnav-selected-top-color));
+    background: -webkit-linear-gradient(bottom, @aap-mainnav-selected-bottom-color 0, @aap-mainnav-selected-top-color 100%);
+    background: -o-linear-gradient(bottom, @aap-mainnav-selected-bottom-color 0, @aap-mainnav-selected-top-color 100%);
+    background: -ms-linear-gradient(bottom, @aap-mainnav-selected-bottom-color 0, @aap-mainnav-selected-top-color 100%);
+    background: linear-gradient(bottom, @aap-mainnav-selected-bottom-color 0, @aap-mainnav-selected-top-color 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@aap-mainnav-selected-top-color', endColorstr='@aap-mainnav-selected-bottom-color')";
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    &:after {
+      width: 100%;
+      left: 0;
+      bottom: -1px;
+      opacity: 1;
+      background: @brand-color;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        opacity: 1;
+        transition: none;
+      }
+    }
+
+    &:first-child {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+
+  // Don't show white bar under menu item
+  .navbar-nav > .open > a,
+  .navbar-nav > .open > a:hover,
+  .navbar-nav > .open > a:focus,
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus,
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus,
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li.open > a:focus,
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li.open > a {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .t3-navbar .level1 li:hover,
+  .t3-navbar .level1 li.open > a {
+    background: @aap-subnav-hover-bg-color;
+  }
+
+  // Megamenu
+  .t3-megamenu {
+    .mega-dropdown-menu {
+      font-size: @aap-subnav-font-size;
+      background-color: @aap-subnav-bg-color;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    }
+
+    .mega-col-nav {
+      // Remove gutters between menu items
+      padding: 0;
+    }
+
+    .mega-inner {
+      padding: 0;
+    }
+
+    .dropdown-menu .mega-nav {
+      > li > a {
+        color: @aap-subnav-text-color;
+        &:hover {
+          color: @aap-subnav-hover-text-color;
+        }
+      }
+      > li.active > a {
+        background-color: @aap-subnav-selected-bg-color;
+        color: @aap-subnav-selected-text-color;
+      }
+    }
+  }
+}
+
+//---- DROP DOWN MENU
+//TODO:  Eliminate class conflict with .daterangepicker.dropdown-menu
+.t3-mainbody .dropdown-menu {
+  background: @aap-dropdown-bg-color;
+  border: 1px solid @aap-dropdown-border-color;
+  .btn-primary, .btn, a {
+    background: @aap-dropdown-bg-color;
+    border: 0 none;
+    color: @aap-dropdown-text-color;
+    font-size: @aap-button-font-size;
+    text-align: left;
+  }
+  > li {
+    border: 0 none;
+    .btn-link {
+      width: 100%;
+      text-align: left;
+    }
+    a:hover {
+      background-color: @aap-dropdown-hover-bg-color;
+      color: @aap-dropdown-hover-text-color;
+      border-radius: 0;
+    }
+    &.active {
+      background-color: @aap-dropdown-selected-bg-color;
+      color: @aap-dropdown-selected-text-color;
+      font-weight: bold;
+      border-radius: 0;
+    }
+  }
+  a.btn {
+    margin-bottom: 0;
+  }
+  // Eliminate Bootstrap's "not-allowed" cursor
+  & > .disabled > a {
+    &:hover,
+    &:focus {
+      cursor: initial;
+    }
+  }
+}
+
+// Fix image sizing problem (for images used in the main navigation?)
+.nav > li > a > img {
+  position: relative;
+  top: -8px;
+  margin-top: 0;
+  width: 112px;
+}
+
+// Profile button
+.navbar-nav li.dropdown.mega:last-child {
+  position: absolute;
+  right: 0;
+}
+
+// Profile icon
+.navbar-nav a.menu-profile img {
+  height: 24px;
+  width: 24px;
+  top: 0;
+}
+
+//---- Daterangepicker
+
+.daterangepicker.dropdown-menu {
+  background: @aap-dropdown-bg-color;
+  border: 1px solid @aap-dropdown-border-color;
+  .btn-primary {
+    border-color: @aap-primary-button-border-color;
+    background-color: @aap-primary-button-bg-color;
+    color: @aap-primary-button-text-color;
+  }
+  a.btn {
+    margin-bottom: 0;
+  }
+  // Styled to match drop down menus
+  .ranges ul {
+    margin-bottom: 4px;
+  }
+  .ranges li {
+    color: @aap-dropdown-text-color;
+    //border-color: @grayMuchLighter;
+    border-width: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background-color: @aap-dropdown-bg-color;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:hover {
+      background-color: @aap-dropdown-hover-bg-color;
+      color: @aap-dropdown-hover-text-color; // override style defined in plugin
+    }
+    &.active, &.active:hover {
+      background-color: @aap-dropdown-selected-bg-color;
+      color: @aap-dropdown-selected-text-color;
+      font-weight: bold;
+    }
+  }
+  .ranges .input-mini {
+    color: @aap-dropdown-text-color;
+  }
+}
+
+.daterangepicker {
+  td {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+  }
+  td.active, td.active:hover {
+    border-color: @aap-primary-button-border-color;
+    background-color: @aap-primary-button-bg-color;
+    color: @aap-primary-button-text-color;
+  }
+  .calendar {
+    width: auto;
+    max-width: initial;
+
+    // Metrics range picker, fix month labels
+    .month {
+      .monthselect {
+        width: 59%;
+        min-width: 100px;
+        display: inline-block;
+      }
+      .yearselect {
+        width: 40%;
+        min-width: 65px;
+        display: inline-block;
+      }
+    }
+  }
+  .calendar-date {
+    background: @aap-dropdown-bg-color;
+  }
+
+  .daterangepicker_start_input label, .daterangepicker_end_input label {
+    text-transform: none;
+  }
+
+  .ranges {
+    width: 245px;
+
+    .input-mini {
+      width: 115px;
+    }
+
+    .range_inputs [disabled] {
+      cursor: auto;
+    }
+
+    .cancelBtn {
+      margin-left: 8px;
+    }
+  }
+}
+
+// Hide start and end date when custom calendar is not shown
+.daterangepicker:not(.show-calendar) {
+  .daterangepicker_start_input, .daterangepicker_end_input {
+    display: none;
+  }
+  .monthselect, .yearselect {
+    display: inline-block;
+  }
+}
+
+div.calendar {
+  width: auto;
+}
+
+//---- TAG FILTER
+//TODO: check this when someone creates an API with tags
+.dropdown-menu.tags {
+  min-width: 350px;
+  left: -175px;
+  top: 39px;
+  padding-bottom: 4px;
+  &:before {
+    border-bottom: 7px solid @aap-border-color;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: "";
+    height: 0;
+    left: 202px;
+    position: absolute;
+    top: -7px;
+    width: 0;
+    z-index: 0;
+  }
+  &:after {
+    border-bottom: 7px solid @aap-dropdown-bg-color;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: "";
+    height: 0;
+    left: 202px;
+    position: absolute;
+    top: -6px;
+    width: 0;
+    z-index: 1;
+  }
+  > li {
+    float: left;
+    width: 100%;
+    border: 0 none;
+    @tag-label-font-size: @aap-button-font-size - 2px;
+    font-size: @tag-label-font-size;
+    padding: 0 0 5px 0;
+    > a.clear-tags {
+      float: right;
+      width: auto;
+      padding: 4px 10px;
+      color: @aap-link-color;
+      text-decoration: none;
+      display: inline;
+      transition: all 0.2s ease 0s;
+      &:active,
+      &:hover {
+        color: @aap-link-hover-color;
+        background: none transparent;
+        transition-duration: 0s;
+      }
+    }
+    > div {
+      @tag-selected-bg-color: mix(white, @brand-color, 80%);
+      a {
+        padding: 5px 10px;
+        @tag-border-color: lighten(@aap-button-border-color, 6%);
+        border: 1px solid @tag-border-color;
+        background-color: @aap-button-bg-color;
+        //color: @aap-link-color; // originally like links
+        color: @aap-button-text-color;
+        float: left;
+        margin-top: 5px;
+        transition: all 0.2s ease 0s;
+        &:hover {
+          border-color: @aap-button-hover-border-color;
+          background: @aap-button-hover-bg-color;
+          color: @aap-button-hover-text-color;
+          text-decoration: none;
+          transition-duration: 0s;
+        }
+        &.active {
+          // The selected tag (not a tag group)
+          background-color: @tag-selected-bg-color;
+          border-color: @brand-color;
+          color: @aap-button-selected-text-color;
+        }
+      }
+      &.active {
+        a {
+          // The selected tag group
+          background-color: @tag-selected-bg-color;
+          border-color: @brand-color;
+          color: @aap-button-selected-text-color;
+        }
+        & + div a {
+          // Automatically active tags in the selected tag group
+          border-color: @brand-color;
+        }
+      }
+    }
+    > div:first-child > a {
+      width: 100%;
+    }
+    > div:last-child > a {
+      margin-right: 5px;
+    }
+  }
+}
+
+//---- Highcharts
+
+.highcharts-container {
+  width: auto !important;
+}
+
+//---- Recaptcha
+// set important to override inline styles
+
+.recaptchatable {
+  border-color: @aap-border-color;
+  #recaptcha_image {
+    -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    box-sizing: padding-box;
+    border-width: 0 !important;
+  }
+  input {
+    border-color: @aap-field-border-color !important;
+    background-color: @aap-field-bg-color !important;
+    &:focus {
+      &:hover {
+        border-color: @aap-focus-color !important;
+      }
+      border-color: @aap-focus-color !important;
+    }
+    &:hover {
+      border-color: @aap-field-hover-border-color !important;
+    }
+  }
+  a {
+    color: @aap-light-text-color !important;
+    &:hover {
+      color: @aap-link-color !important;
+      text-decoration: underline !important;
+    }
+  }
+  #recaptcha_image {
+    border: 0 none !important;
+  }
+}
+
+//---- Swagger UI
+#swagger-ui-container {
+  max-width: 100%;
+  .heading h2,
+  .description {
+    display: none;
+  }
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: @aap-section-title-color;
+    text-transform: inherit;
+  }
+}
+
+.authorization {
+  margin: 10px 3px;
+  span {
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: @aap-base-font-size;
+  }
+}
+
+.post .authorization span {
+  background-color: #C3E8D1;
+}
+
+.put .authorization span {
+  background-color: #F0E0CA;
+}
+
+.patch .authorization span {
+  background-color: #F5D5C3;
+}
+
+.delete .authorization span {
+  background-color: #E8C6C7;
+}
+
+.get .authorization span {
+  background-color: #C3D9EC;
+}
+
+.swagger-ui-wrap {
+  ul#resources li.resource div.heading ul.options {
+    margin: 20px 0 0 0;
+  }
+
+  ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.heading h3 span.http_method a {
+    padding: 7px 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+  }
+
+  input, textarea, select {
+    background: #fff;
+    border: 1px solid @aap-field-border-color;
+    font-size: @aap-base-font-size;
+    font-weight: normal;
+    color: @aap-text-color;
+    &:focus {
+      //.focusGlowEffect() !important;
+      border: 1px solid @aap-focus-color !important;
+    }
+  }
+  input.parameter,
+  .parameter,
+  textarea.body-textarea,
+  .body-textarea {
+    background: #fff;
+    border: 1px solid @aap-field-border-color;
+    font-size: @aap-base-font-size;
+  }
+
+  .code,
+  table thead tr th,
+  label {
+    font-family: @aap-base-font-family;
+    font-size: @aap-base-font-size;
+    font-weight: normal;
+  }
+
+  table {
+    font-family: @aap-base-font-family;
+  }
+
+  .required {
+    font-weight: normal;
+  }
+
+  .signature-nav {
+    font-size: @aap-base-font-size;
+  }
+  td strong {
+    font-weight: normal;
+    font-size: @aap-base-font-size;
+  }
+  a.toggleOperation {
+    font-size: @aap-base-font-size;
+  }
+  button.auth-option {
+    border-radius: 0;
+    display: inline-block;
+    font-size: @aap-base-font-size;
+    font-weight: normal;
+    line-height: inherit;
+    margin-bottom: 0;
+    padding: 7px 14px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    @swagger-button-highlight-color: lighten(@aap-button-hover-bg-color, 11%);
+    background: linear-gradient(to bottom, @swagger-button-highlight-color 0%, @aap-button-hover-bg-color 100%);
+    border: 1px solid @aap-button-border-color;
+    color: @aap-button-text-color;
+  }
+  .options a {
+    font-size: @aap-base-font-size;
+  }
+  .heading h2 a {
+    color: #757575 !important;
+    text-transform: inherit;
+  }
+  .model-signature .signature-container,
+  table tbody tr td {
+    font-weight: normal;
+    font-size: @aap-base-font-size;
+  }
+  table thead tr th,
+  table tbody tr td {
+    border-bottom: 1px solid;
+  }
+  .post table thead tr th,
+  .post table tbody tr td {
+    border-bottom-color: #C3E8D1;
+  }
+  .put table thead tr th,
+  .put table tbody tr td {
+    border-bottom-color: #F0E0CA;
+  }
+  .patch table thead tr th,
+  .patch table tbody tr td {
+    border-bottom-color: #F5D5C3;
+  }
+  .delete table thead tr th,
+  .delete table tbody tr td {
+    border-bottom-color: #E8C6C7;
+  }
+  .get table thead tr th,
+  .get table tbody tr td {
+    border-bottom-color: #C3D9EC;
+  }
+  td, tr td {
+    border-top: 0 none;
+  }
+  .sandbox_header {
+    .btn-default, button, input[type="button"] {
+      padding: 7px 14px;
+      @swagger-button-highlight-color: lighten(@aap-button-hover-bg-color, 11%);
+      background: linear-gradient(to bottom, @swagger-button-highlight-color 0%, @aap-button-hover-bg-color 100%);
+      color: @aap-button-text-color;
+    }
+  }
+  #api_information_panel:before {
+    content: "OAuth Scopes:";
+    font-weight: bold;
+  }
+}
+
+//** PAGE-SPECIFIC ********
+
+//---- COMMON TOOLS
+
+.sort-dropdown,
+.date-dropdown,
+.tag-dropdown {
+  // float: right !important; // individual float should not be needed after action-group wrapper is added
+  display: inline-block;
+}
+
+.table-filter {
+  float: right !important;
+}
+
+.edit-options,
+.view-options {
+  float: right !important;
+}
+
+.message.loading {
+  padding: 8px;
+}
+
+.action-group + .action-group {
+  margin-right: 14px; // assuming floated right
+}
+
+.action-group {
+  float: right;
+  //margin-left: -1px;
+  margin-bottom: 0;
+  // Unfortunately, there are no good solutions to eliminate the impact of white space characters on layout, including {font-size:0}
+  // For now, we will float the contents left (next declaration) and float the group container right
+  & > a,
+  & > button,
+  & > div {
+    margin-left: 8px;
+    float: left;
+  }
+
+  form {
+    float: left;
+  }
+}
+
+.form-actions button, .form-actions a {
+  margin-right: 8px;
+}
+
+//---- VIEW PROFILE
+.view-profile {
+
+  // Match H1 page title styles
+  legend {
+    font-size: @aap-page-title-font-size;
+    font-weight: normal;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid @aap-border-color;
+    line-height: 1.1;
+  }
+  .dl-horizontal {
+    margin: 0;
+    dt, dd {
+      line-height: 46px;
+    }
+  }
+  #users-profile-custom {
+    legend {
+      display: none;
+    }
+    .dl-horizontal {
+      dt:nth-of-type(1),
+      dd:nth-of-type(1),
+      dt:nth-of-type(3),
+      dd:nth-of-type(3),
+      dt:nth-of-type(4),
+      dd:nth-of-type(4),
+      dt:nth-of-type(5),
+      dd:nth-of-type(5),
+      dt:nth-of-type(6),
+      dd:nth-of-type(6) {
+        display: none;
+      }
+    }
+  }
+}
+
+//---- EDIT MY PROFILE
+.view-profile {
+
+  // Hide button bar background
+  .form-actions {
+    background-color: inherit;
+    padding: 0;
+
+    // Fix button alignment
+    a.btn {
+      margin-bottom: 0;
+    }
+  }
+
+  // Fix timezones not displaying in drop down
+  .chzn-search > input {
+    float: initial;
+  }
+
+  .chzn-container .chzn-single {
+    max-width: 500px;
+  }
+
+  // NOTE: This CSS is fragile and intentionally overspecified. It should be refactored after the Forrester demo by adding appropriate markup in the page.
+  .profile-edit {
+    // First set of fields
+    fieldset:nth-of-type(1) {
+
+      // Hide the first form group that contains no visible content but messes up the whitespace
+      legend + .form-group {
+        display: none;
+      }
+
+      // Name
+      > div.form-group:nth-of-type(2) {
+        .star {
+          display: none;
+        }
+      }
+
+      // Username
+      > div.form-group:nth-of-type(3) {
+        display: none;
+      }
+
+      // Password
+      > div.form-group:nth-of-type(4) {
+        .optional {
+          display: none;
+        }
+        .controls::after {
+          content: "(optional)";
+          font-size: smaller;
+          font-weight: normal;
+          padding-left: 8px;
+          line-height: 35px;
+        }
+      }
+
+      // Confirm password
+      > div.form-group:nth-of-type(5) {
+        .optional {
+          display: none;
+        }
+        .controls::after {
+          content: "(optional)";
+          font-size: smaller;
+          font-weight: normal;
+          padding-left: 8px;
+          line-height: 35px;
+        }
+      }
+
+      // Email Address
+      > div.form-group:nth-of-type(6) {
+        .star {
+          display: none;
+        }
+      }
+
+      // Confirm email Address (sic)
+      > div.form-group:nth-of-type(7) {
+        .star {
+          display: none;
+        }
+      }
+
+    }
+
+    // "Basic Settings" fields
+    fieldset:nth-of-type(2) {
+
+      legend {
+        display: none;
+      }
+
+      // Time zone
+      > div.form-group:nth-of-type(2) {
+        .optional {
+          display: none;
+        }
+        .controls::after {
+          content: "(optional)";
+          font-size: smaller;
+          font-weight: normal;
+          padding-left: 8px;
+          line-height: 35px;
+        }
+      }
+
+      // Editor
+      > div.form-group:nth-of-type(1),
+        // Frontend language
+      > div.form-group:nth-of-type(3),
+        // Backend template style
+      > div.form-group:nth-of-type(4),
+        // Backend language
+      > div.form-group:nth-of-type(5),
+        // Help Site
+      > div.form-group:nth-of-type(6) {
+        display: none;
+      }
+
+    }
+  }
+}
+
+//---- LOGIN
+
+.layout-default.task-submit,
+.view-login,
+.view-registration,
+.view-reset {
+  .t3-content {
+    padding-top: @unit * 8;
+  }
+
+  // Align with my.axway.com
+  .btn,
+  .btn-default,
+  .btn-primary {
+    border-radius: 0;
+  }
+
+  h1, h2 {
+    padding-bottom: @unit * 2;
+    margin-bottom: @unit * 3;
+  }
+
+  form {
+    max-width: 390px;
+    min-height: 330px;
+    width: auto;
+
+    label {
+      display: block;
+    }
+
+    input {
+      border-width: 2px;
+      font-size: 16px;
+      min-height: 26px;
+      line-height: 26px;
+      padding: 5px 10px;
+      height: auto;
+    }
+
+    button.btn-primary {
+      width: @unit * 40;
+      height: @unit * 6;
+      background-color: @brand-color;
+      border: 1px solid @brand-color;
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+      line-height: @unit * 6;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .help-block {
+      font-size: @aap-base-font-size - 1px;
+    }
+  }
+}
+
+//TODO: See if this can be made general to element level, not view level
+.layout-default.task-submit,
+.view-registration,
+.view-reset,
+.view-user,
+.view-users,
+.view-application,
+.view-applications {
+  select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .inputbox {
+    width: 100%;
+  }
+}
+
+//---- API CATALOG
+//---- APPS IN LIST VIEW
+
+.apis {
+  @itemHeight: 200px;
+  @tileHeight: 300px;
+  @tileIconSize: 128px;
+  @apiBg: #fff;
+  @iconWidth: @itemHeight * 1.3;
+  @rowHeight: @unit * 2;
+
+  /**
+   * Tiles or list is controlled wit flex.
+   */
+
+  font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &[data-view=tiles] {
+    flex-direction: row;
+    margin-right: -@unit * 3;
+  }
+
+  &, h2, p, ul, li, dl, dt, dd {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  h2, p, dl, div {
+    position: absolute;
+  }
+
+  /**
+   * API list item.
+   */
+
+  > li {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 @unit rgba(0, 0, 0, 0.1);
+    background-color: @apiBg;
+    margin-bottom: @unit * 3;
+
+    &:hover {
+      border-color: @brand-color;
+
+      h2 a {
+        color: @brand-color;
+      }
+    }
+
+    &::after {
+      cursor: pointer;
+      pointer-events: none;
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: @iconWidth;
+      top: 0;
+      height: 100%;
+      border-bottom: @itemHeight / 3.2 solid @apiBg;
+      border-left: @itemHeight / 3.2 solid transparent;
+      transform: translate(-100%);
+      z-index: 3;
+    }
+  }
+
+  /**
+   * Assuming there are 3 items per row.
+   */
+
+  &[data-view=tiles] > li {
+    width: calc(~"33.33% - " (@unit * 9 / 3));
+    margin-right: @unit * 3;
+    height: @tileHeight;
+    overflow: visible;
+    margin-top: @unit * 3;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width:1200px) {
+    &[data-view=tiles] > li {
+      width: calc(~"50% - " (@unit * 6 / 2));
+    }
+  }
+
+  .api-icon {
+    position: relative;
+    width: @iconWidth;
+    height: @itemHeight;
+    overflow: hidden;
+
+    a,
+    img {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: @iconWidth;
+      z-index: 1;
+    }
+
+    img {
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: transparent;
+    }
+
+    &::after {
+        cursor: pointer;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        pointer-events: none;
+        background: linear-gradient(0deg, fade(black, 10%), fade(black, 0));
+    }
+  }
+
+  &[data-view=tiles] .api-icon {
+    position: absolute;
+    top: -@unit * 3;
+    right: @unit * 2;
+    width: @tileIconSize;
+    height: @tileIconSize;
+
+    img {
+      max-height: 100%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  h2,
+  p,
+  dl {
+    right: @iconWidth / 1.5;
+  }
+
+  h2 {
+    left: @iconWidth;
+    height: @rowHeight * 3;
+    line-height: @rowHeight * 3;
+    top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 150%;
+    font-weight: bold;
+    padding-left: @unit * 2;
+
+    a {
+      color: @aap-text-color;
+    }
+  }
+
+  &[data-view=tiles] h2,
+  &[data-view=tiles] p {
+    width: calc(~"100% - " (@tileIconSize + @unit * 4));
+    left: 0;
+  }
+
+  &[data-view=tiles] h2 {
+    white-space: normal;
+    height: auto;
+    line-height: normal;
+    top: @unit * 2;
+    text-transform: uppercase;
+    font-size: 130%;
+  }
+
+  p {
+    top: @rowHeight * 3;
+    left: @iconWidth;
+    padding-left: @unit * 2;
+    bottom: @rowHeight * 1.5 + @unit * 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  &[data-view=tiles] p {
+    top: @tileIconSize - @unit;
+    font-size: 90%;
+    bottom: @rowHeight * 3 + ceil(@unit / 2) + @unit * 4;
+    -webkit-line-clamp: 6;
+  }
+
+  /**
+   * Tags
+   */
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &[data-view=tiles] ul {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  ul > li {
+    color: @aap-primary-button-bg-color;
+    display: inline;
+    background-color: fade(@apiBg, 90%);
+    padding: ceil(@unit / 4) ceil(@unit / 2);
+    border: 1px solid @aap-primary-button-bg-color;
+    border-radius: ceil(@unit / 2);
+    font-size: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: normal;
+    margin-left: ceil(@unit / 2);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &[data-view=tiles] ul > li {
+    margin-bottom: ceil(@unit / 2);
+  }
+
+  [role=toolbar] {
+    top: 0;
+    right: @unit * 2;
+    padding: @unit * 2 0;
+
+    a {
+      display: block;
+      margin-bottom: @unit;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &.btn {
+        text-align: left;
+        border: 0 none;
+        border-radius: @unit * 3;
+
+        &:hover {
+          text-decoration: underline;
+          background: transparent;
+        }
+
+        &.btn-primary:hover {
+          background: @aap-primary-button-bg-color;
+        }
+      }
+    }
+  }
+
+  &[data-view=tiles] [role=toolbar] {
+    top: @tileIconSize - @unit * 3;
+  }
+
+  /**
+   * Information
+   */
+
+  dl {
+    display: flex;
+    bottom: 0;
+    left: @iconWidth;
+    height: @rowHeight * 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: @unit * 2 0;
+  }
+
+  dt {
+    padding-left: @unit * 2;
+    border-left: 1px solid @aap-border-color;
+    margin-right: @unit;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  &[data-view=tiles] dl {
+    height: @rowHeight * 3 + ceil(@unit / 2);
+  }
+
+  dd {
+    margin-right: @unit * 2;
+
+    /**
+     * These are tags.
+     */
+
+    &:last-child {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  dt, dd {
+    display: inline;
+    line-height: @rowHeight * 1.5;
+  }
+
+  &[data-view=tiles] dl {
+    left: 0;
+    right: @unit * 2;
+  }
+
+  &[data-view=tiles] dt {
+    display: none;
+
+    /**
+     * This is the version.
+     */
+
+    &:first-of-type {
+      display: inline;
+    }
+  }
+
+  &[data-view=tiles] dt {
+    display: none;
+
+    /**
+     * This is the version.
+     */
+
+    &:first-of-type {
+      display: inline;
+    }
+  }
+
+  &[data-view=tiles] dd {
+    &:nth-of-type(2) {
+      border-left: 1px solid @aap-border-color;
+      padding-left: @unit * 2;
+    }
+  }
+}
+
+//---- API TEST
+
+.view-apitester {
+  // API metadata at top of page
+  .entry-details {
+    //display: block;
+    //width: 100%;
+    //float: left;
+    margin-top: 10px;
+    .logo {
+      background-position: center center;
+      background-size: cover;
+      float: left;
+      height: 150px;
+      width: 150px;
+      display: block;
+      position: relative;
+      border: 0 none;
+    }
+    .content {
+      //padding: 0 20px 0 40px;
+      label {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+//---- APPLICATION LIST
+
+.view-users,
+.view-applications {
+  .no-applications-defined {
+    margin-top: 5px;
+  }
+}
+
+#applications-table td {
+  border-top: none;
+  padding: 0;
+}
+
+//---- VIEW APPLICATION: DETAILS
+
+.view-user,
+.view-application {
+  #general {
+    clear: both;
+  }
+
+  /*  TODO: CHECK THIS AGAINST NEW MARKUP
+   .input-group.filter-group {
+     top: -6px;
+     .search {
+       border-right:0;
+     }
+     .filter-addon {
+       border-left:0;
+       background-color: @aap-bg-color;
+     }
+   }
+   #dtable_filter input {
+     margin-left: 0;
+   }
+ */
+}
+
+//------ Quota Dialog
+.modal-body .quota-methods {
+
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 0;
+
+  .quota-method {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .quota-restrictions {
+    list-style-type: square;
+    list-style-position: outside;
+  }
+}
+
+//---- CREATE APPLICATION
+
+.application.logo {
+  background-position: center center;
+  background-size: cover;
+  float: left;
+  height: 150px;
+  width: 150px;
+  display: block;
+  position: relative;
+  border: 0 none;
+}
+
+.fileinput-preview img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+#application-form .fileinput-new {
+  cursor: pointer; // display pointer on Add image
+}
+
+#apis-table {
+  margin-top: 20px; // detach the table from the buttons
+}
+
+table td a.btn.dropdown-toggle {
+  margin-bottom: 0px; // [Actions v] in tables had a bottom margin that caused tall rows
+}
+
+div#authentication .table > tbody > tr > td {
+  padding-top: 5px; // override bootstrap: row is too tall compare to screenshot
+  padding-bottom: 5px;
+}
+
+.com_apiportal form#api-key-create-form .btn {
+  margin-bottom: 8px; // specific to Generate api key button
+}
+
+//---- EDIT APPLICATION: AUTHENTICATION
+// Details table for edit application
+.control-group.row {
+  margin-bottom: 8px;
+}
+
+#oauth-add-scopes-details {
+  .oauth-add-scopes-search {
+    margin-top: 8px;
+
+    .search {
+      border-right: 0;
+    }
+    .input-group-addon {
+      border-left: 0;
+      background-color: @aap-bg-color;
+    }
+  }
+  #oauth-add-scopes-table {
+    margin-bottom: 10px;
+  }
+  .form-group {
+    margin-bottom: 0px;
+  }
+}
+
+.com_apiportal #api-key-create-form > button {
+  margin-bottom: 8px;
+}
+
+.com_apiportal .add-shared-users-button {
+  margin-bottom: 8px;
+}
+
+#oauth-client-form {
+  label {
+    white-space: nowrap;
+  }
+}
+
+#oauth-secret-form {
+  #oauth-secret-label {
+    white-space: nowrap;
+  }
+  #oauth-secret-key {
+    white-space: nowrap;
+    overflow: visible;
+  }
+}
+
+#oauth-new-secret-button {
+  float: right;
+}
+
+#api-key-details .control-label {
+  white-space: nowrap;
+}
+
+//---- EDIT APPLICATION: SHARING
+.no-additional-users {
+  margin-left: 10px;
+}
+
+#add-shared-users-details {
+  .add-shared-users-search {
+    margin-top: 8px;
+
+    .search {
+      border-right: 0;
+    }
+    .input-group-addon {
+      border-left: 0;
+      background-color: @aap-bg-color;
+    }
+  }
+}
+
+//---- MONITORING
+.view-monitoring {
+  .t3-content {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.dataTables_length select {
+  margin-right: 5px;
+}
+
+.daterangebutton {
+  float: right;
+}
+
+.daterangepicker.opensleft:after {
+  border-bottom-color: @page-color;
+}
+
+#dtableCustomButtons,
+#dtableCustomButtons .btn-default {
+  float: left;
+  margin-bottom: 0;
+}
+
+/*.btn-toolbar > .btn + .btn-group,
+.btn-toolbar > .btn-group + .btn,
+.header-bar > .btn + .btn-group,
+.header-bar > .btn-group + .btn {
+  margin-left: 8px;
+}*/
+
+.btn-toolbar,
+.action-group {
+  margin-left: 0;
+  padding: @unit * 2 0;
+}
+
+[role=search] {
+  position: relative;
+  margin: 0 @unit;
+
+  label {
+    margin-bottom: 0;
+
+    span {
+      padding-right: @unit;
+      display: inline-block;
+    }
+
+    input {
+      display: inline-block;
+      padding-right: @unit * 4;
+    }
+  }
+
+  &::after {
+    font-family: 'Axway-Common';
+    content: "\e908";
+    text-align: center;
+    font-size: 140%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 7px;
+    opacity: 0.5;
+  }
+}
+
+.btn-toolbar {
+  margin-bottom: @unit * 2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: @aap-button-bg-color;
+
+  .action-group,
+  .dataTables_filter,
+  .tablesorter-filter {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .dataTables_filter,
+  .tablesorter-filter {
+    float: right;
+
+    label,
+    .dropdown {
+      float: left;
+    }
+  }
+
+  // Align with a.btn in toolbars,
+  // not sure why it needs this offset
+  .btn-group button.btn.btn-default {
+    padding-top: @unit;
+    padding-bottom: @unit - 2;
+  }
+
+  .btn-default {
+    .border-radius(@unit * 3);
+
+    &:hover, &:active {
+      background-color: @aap-primary-button-bg-color;
+      color: contrast(@aap-primary-button-bg-color);
+    }
+  }
+
+  .btn-group > .btn:last-child:not(:first-child),
+  .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: @unit * 3;
+    border-top-left-radius: @unit * 3;
+  }
+}
+
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+  margin-left: 0;
+}
+
+// Fix for monitoring tabs
+.view-monitoring .nav-tabs {
+  margin-bottom: 10px;
+}
+
+// dataTables filter
+
+.table-filter {
+  padding: 0;
+}
+
+// Same as action-group
+.dataTables_filter,
+.tablesorter-filter, {
+  float: right;
+}
+
+.dataTables_filter label,
+.tablesorter-filter label {
+  position: relative;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.tablesorter-filter input {
+  display: inline-block;
+  margin-left: 0;
+  width: 16em;
+  padding-right: 30px;
+  margin-left: 0;
+}
+
+[role=search],
+.dataTables_filter,
+.tablesorter-filter {
+  // Hide clear button for search fields
+  input[type=text]::-ms-clear {
+    display: none;
+  }
+}
+
+.dataTables_filter .fa-search,
+.tablesorter-filter .fa-search {
+  position: absolute;
+  width: 0;
+  right: 24px;
+  top: 8px;
+  color: @aap-light-text-color;
+  font-size: @aap-button-font-size;
+  pointer-events: none;
+}
+
+.dataTables_length label {
+  select {
+    float: left;
+  }
+  span {
+    float: left;
+    padding-left: 10px;
+    line-height: 32px;
+    color: @aap-light-text-color;
+  }
+}
+
+.dataTables_wrapper .dataTables_info {
+  color: @aap-light-text-color;
+  padding: @unit * 2 @unit;
+}
+
+// Duplicate button styles
+//TODO: Find a better way to reuse the code
+
+.dataTables_paginate a {
+  background-image: none;
+  background-color: @aap-button-bg-color;
+  border: 1px solid @aap-button-border-color;
+  color: @aap-button-text-color;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: @aap-button-font-size;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  & + a {
+    border-left: 0 none;
+  }
+}
+
+.dataTables_paginate a.paginate_disabled_previous,
+.dataTables_paginate a.paginate_disabled_next {
+  background-color: @aap-button-disabled-bg-color;
+  border-color: @aap-button-disabled-border-color;
+  color: @aap-button-disabled-text-color;
+  box-shadow: none;
+  cursor: initial;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.dataTables_paginate a.paginate_disabled_previous:hover,
+.dataTables_paginate a.paginate_disabled_next:hover {
+  text-decoration: none;
+}
+
+//---- GETTING STARTED
+.avPlayerWrapper {
+  display: block;
+  text-align: center;
+  clear: both;
+  margin: 40px 0;
+}
+
+//---- DOCUMENTATION
+table.a5styledoc {
+  width: 100%;
+
+  td {
+    border: none;
+    // Lighten extra text such as file size
+    color: @aap-light-text-color;
+    vertical-align: top;
+  }
+
+  tr:hover {
+    background-color: @aap-tr-hover-bg-color;
+  }
+
+  td:first-child {
+    padding-left: 25px;
+  }
+
+  td:nth-child(1) {
+    width: 40%;
+  }
+  td:nth-child(2) {
+    width: 10%;
+  }
+
+  td img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  // For download labels, e.g. HTML and PDF
+  a.filetype {
+    font-size: smaller;
+  }
+
+  // Document name
+  a.docname {
+    font-size: larger;
+  }
+}
+
+//---- HELP CENTER
+
+table.a5stylehelpcenter {
+
+  font-size: 0;
+
+  td, tr td {
+    border-top: 0 none;
+  }
+
+  td > p {
+    font-size: @aap-base-font-size;
+  }
+
+  td p:first-child {
+    margin: 20px 0 0 0;
+  }
+
+  p:first-child a {
+    font-size: larger;
+  }
+
+  img {
+    border: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+}
+
+//---- CONTACT US
+table.a5stylecontact {
+  td, tr td {
+    border-top: 0 none;
+    padding: 5px 10px;
+    vertical-align: baseline;
+  }
+}
+
+//---- PRICING
+
+.pricing {
+  padding: 0;
+  color: @aap-text-color;
+  background: transparent;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin: @unit * 2 0;
+
+  h2 {
+    font-family: @aap-base-font-family;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: @aap-section-title-color;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+  }
+
+  .price {
+    font-size: 48px;
+    text-style: bold;
+  }
+
+  .permonth {
+    font-size: 10pt;
+    color: @aap-disabled-text-color;
+  }
+
+  .numrequests {
+    font-size: 24pt;
+    text-style: bold;
+  }
+
+  .requests {
+    font-size: 10pt;
+    text-style: normal;
+  }
+
+  .additionaltext {
+    font-size: 13pt;
+    text-style: bold;
+  }
+
+  .tier1 {
+    float: left;
+    width: 32%;
+    background: #FFFFFF;
+    border: 1px solid @aap-border-color;
+    height: 560px;
+    margin-right: 0px;
+    text-align: center;
+  }
+
+  .tier2 {
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid @aap-border-color;
+    height: 560px;
+    margin-right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 33%;
+    position: relative;
+  }
+
+  * html .xmiddlecol3 {
+    float: left
+  }
+  * html .xmiddlecol3 .xinner3 {
+    width: 100%;
+  }
+
+  .tier3 {
+    float: right;
+    width: 32%;
+    background: #FFFFFF;
+    position: relative;
+    border: 1px solid @aap-border-color;
+    height: 560px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .tier1, .tier2, .tier3 {
+    box-shadow: 0 0 @unit rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      border-color: @brand-color;
+
+      a.start {
+        border-color: @brand-color;
+        background-color: @brand-color;
+
+        &:hover, &:focus {
+          border-color: fade(@brand-color, 90%);
+          background-color: fade(@brand-color, 90%);
+        }
+      }
+    }
+  }
+
+  .header {
+    background: transparent;
+  }
+
+  .start {
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid @aap-primary-button-border-color;
+    font-size: 12pt;
+    background: @aap-primary-button-bg-color;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+    color: @aap-primary-button-text-color;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: all 0.2s ease 0s;
+    &:hover, &:focus {
+      border-color: @aap-primary-button-hover-border-color;
+      background-color: @aap-primary-button-hover-bg-color;
+      color: @aap-primary-button-hover-text-color;
+      transition-duration: 0s;
+    }
+  }
+
+  hr {
+    border-color: @aap-border-color;
+    width: 60%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+}
+
+//---- HOMEPAGE
+@rowHeight: @unit * 2;
+@primaryColor: @aap-primary-button-bg-color;
+@secondaryColor: #222222;
+@borderColor: #989998;
+@hoverColor: @brand-color;
+@tileIconSize: 128px;
+
+.flip-container {
+  perspective: 1000px;
+
+  /**
+   * For mobile we need touch event
+   * to toggle some attribute or class.
+   */
+
+  > .flip-card {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    [role=region] {
+      backface-visibility: hidden;
+
+      &:first-child {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+
+      &:last-child {
+        z-index: 1;
+        transform: rotateY(180deg);
+      }
+    }
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.view-home {
+  main {
+    font-size: 100%;
+
+    h1,
+    h1 + p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 500%;
+      line-height: 150%;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    h1 + p {
+      padding-bottom: @unit * 6;
+      font-size: 200%;
+      color: #fff;
+      font-weight: 100;
+    }
+
+    h2 {
+      margin: @unit * 2;
+      font-size: 200%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: @secondaryColor;
+      text-decoration: underline;
+    }
+
+    [aria-hidden=true] {
+      display: none !important;
+    }
+
+    section {
+      position: relative;
+      z-index: 2;
+      padding: @rowHeight * 4;
+
+      .auto {
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: fixed;
+      left: 0;
+      top: 0;
+      border-top: 1600px solid #fff;
+      border-right: 1600px solid transparent;
+      z-index: 1;
+    }
+  }
+
+  body {
+    background-image: url(/desenvolvedores/components/com_apiportal/assets/img/home/boat.jpg);
+    background-position: 160% bottom;
+    background-repeat: no-repeat;
+    background-size: 75%;
+  }
+
+  #enterSection {
+    padding: 9%;
+    position: relative;
+    background-color: @aap-page-heading-background-color; // fallback if no image
+    background-image: @aap-page-heading-background-image;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+
+    /**
+     * This is very cool for branding, but not yet supported by IE.
+     * The only workaround is media query to place the gradient pseudo
+     * with opacity only for IE and use the blend mode in other browsers.
+     */
+
+    /* IRU: ince we have a fallback color, this blends the image with it.
+    background-blend-mode: overlay;
+    */
+
+    h1,
+    p,
+    a {
+      position: relative;
+      z-index: 3;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 200%;
+      font-weight: 700;
+      padding: @unit * 3;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 500px;
+      width: 33.33%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background:
+          linear-gradient(90deg,
+            fade(@aap-page-heading-left-color, @aap-page-heading-left-color-opacity),
+            fade(@aap-page-heading-right-color, @aap-page-heading-right-color-opacity)
+          );
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-top: 1280px solid @aap-page-heading-left-color;
+      border-right: 1280px solid transparent;
+      z-index: 2;
+      opacity: 0.4;
+    }
+  }
+
+  #featuresSection {
+    &::after {
+      border-top: 1280px solid fade(@aap-page-heading-left-color, @aap-page-heading-left-color-opacity);
+      border-right: 1280px solid transparent;
+    }
+  }
+
+  #communitySection,
+  #featuresSection {
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      opacity: 0.4;
+      border-top: 534px solid fade(black, 10%);
+      border-right: 534px solid transparent;
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    ul {
+      margin-right: -@unit * 3;
+    }
+
+    li {
+      width: calc(~"33.33% - " (@unit * 9 / 3));
+      position: relative;
+      cursor: pointer;
+      margin-right: @unit * 3;
+      border: 1px solid fade(black, 10%);
+      box-shadow: @unit * 2 @unit * 2 @unit * 2 fade(black, 10%);
+
+      &:hover {
+        border-color: @hoverColor;
+
+        svg {
+          path {
+            fill: @hoverColor;
+          }
+        }
+
+        h2 a,
+        [role=region] > a {
+          color: @hoverColor;
+          border-color: @hoverColor;
+        }
+      }
+
+      svg {
+        width: @tileIconSize;
+        height: @tileIconSize;
+        margin-top: @unit * 3;
+
+        path {
+          fill: @primaryColor;
+        }
+      }
+
+      h2 {
+        color: @primaryColor;
+        margin: @unit * 6 0;
+      }
+
+      p {
+        font-size: 150%;
+        margin: 0;
+        margin-bottom: @unit * 3;
+        width: 100%;
+      }
+
+      > [role=region] {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding: @unit * 3;
+        background-color: white;
+      }
+    }
+  }
+
+  #communitySection {
+    svg {
+      position: absolute;
+      left: 75%;
+      top: 10%;
+      margin-top: 0;
+    }
+
+    ul {
+       justify-content: flex-start;
+    }
+
+    li {
+      border: none;
+      box-shadow: none;
+
+      h2,
+      p {
+        width: 85%;
+      }
+
+      p {
+        margin-bottom: @unit * 6;
+      }
+
+      > [role=region] {
+        align-items: flex-start;
+        text-align: left;
+
+        > a {
+          display: inline-block;
+          font-weight: 700;
+          padding: @unit * 3;
+          border: 1px solid @primaryColor;
+          border-radius: 500px;
+
+          color: @primaryColor;
+          width: 100%;
+          text-align: center;
+          font-size: 150%;
+        }
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.view-help {
+  // row with icons
+  .row .col-md-2 {
+    height: 4em;
+  }
+}
+
+@media (max-width:767px) {
+
+  section .auto {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+
+  section .auto {
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  section .auto {
+    width: 970px;
+  }
+}
+
+@media (min-width:1200px) {
+
+  section .auto {
+    width: 1170px;
+  }
+}
+
+@media (max-height: 682px) {
+
+ .view-home {
+    #enterSection {
+      padding: 5%;
+
+      a {
+        padding: @unit * 2;
+        font-size: 175%;
+      }
+
+      &::after {
+        border-top-width: 1080px;
+        border-right-width: 1080px;
+      }
+    }
+
+    main h1 {
+      font-size: 400%;
+    }
+
+    main h1 + p {
+      font-size: 175%;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #t3-mainnav .navbar-nav > li > a {
+    line-height: 14px;
+  }
+
+  #t3-mainnav {
+    // Set menu height to 100% to override min-height in general styles
+    .navbar-nav {
+      max-height: 100%;
+    }
+  }
+
+  // Increase font size for hamburger icon
+  .navbar-default {
+    .navbar-toggle {
+      font-size: 21px;
+      .fa-bars:before {
+        color: @menu-text-color;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    max-height: 100%;
+  }
+
+  // Fix for pricing blocks on narrow screens
+  .pricing {
+    display: table;
+    caption-side: bottom;
+  }
+
+  .pricing .tier1,
+  .pricing .tier2,
+  .pricing .tier3 {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+
+  .pricing .tier3 {
+    display: table-caption;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .t3-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .view-home .t3-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #t3-mainnav .navbar-nav > li > a {
+    font-size: 14px;
+  }
+}
+
+// Override bootstrap styles to accomodate space for the new headings,
+// without changing the layout.
+//
+
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+
+  .auto,
+  .com_easyblog .t3-mainbody,
+  #system-message-container,
+  .t3-mainnav .container {
+    width: 750px;
+  }
+
+  .layout-default.task-submit,
+  .view-login,
+  .view-reset,
+  .view-registration {
+    .container {
+      width: 750px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      width: 100%;
+  }
+
+  .auto,
+  .com_easyblog .t3-mainbody,
+  #system-message-container,
+  .t3-mainnav .container {
+    width: 970px;
+  }
+
+  .layout-default.task-submit,
+  .view-login,
+  .view-reset,
+  .view-registration {
+    .container {
+      width: 970px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      width: 100%;
+  }
+
+  .auto,
+  .com_easyblog .t3-mainbody,
+  #system-message-container,
+  .t3-mainnav .container {
+    width: 1170px;
+  }
+
+  .layout-default.task-submit,
+  .view-login,
+  .view-reset,
+  .view-registration {
+    .container {
+      width: 1170px;
+    }
+  }
+}
+
+
+
+
+//** 3RD PARTY CONTENT ********
+//---- EasyBlog
+
+.com_easyblog .t3-mainbody {
+  margin: 0 auto;
+  padding: @unit * 2 @unit;
+}
+
+.eblog-site h2 {
+  text-transform: inherit;
+  color: inherit;
+}
+
+//---- EasyDiscuss
+.discuss-wrap h2 {
+  text-transform: inherit;
+  color: inherit;
+}
+
+div#discuss-wrapper {
+  background: @aap-bg-color;
+
+  .nav-collapse.collapse {
+    display: inherit;
+  }
+  // Fix cropped Category Select box
+  .discuss-searchbar--select {
+    width: 150px;
+  }
+  // Remove profile picture by question input
+  .discuss-searchbar .discuss-searchbar--avatar {
+    display: none;
+  }
+
+}
+
+.border-radius (@radius: 3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.focusGlowEffect {
+  -webkit-box-shadow: 0 0 5px 0 @aap-focus-color;
+  -moz-box-shadow: 0 0 5px 0 @aap-focus-color;
+  -o-box-shadow: 0 0 5px 0 @aap-focus-color;
+  box-shadow: 0 0 5px 0 @aap-focus-color;
+}

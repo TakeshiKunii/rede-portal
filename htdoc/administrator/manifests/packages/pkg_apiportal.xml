@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="7.5.4" method="upgrade">
+    <name>COM_APIPORTAL_PACKAGE</name>
+    <packagename>apiportal</packagename>
+    <author>Axway Software</author>
+    <creationDate>2017-14-07</creationDate>
+    <version>7.5.4-13</version>
+    <url>https://www.axway.com/en/enterprise-solutions/api-management-plus</url>
+    <packager>Axway Software</packager>
+    <packagerurl>http://www.axway.com</packagerurl>
+    <description><![CDATA[
+      <h1>API Portal (v7.5.4)</h1>
+      <div style="clear: both;"></div>
+      <p><strong>Built for Joomla 3.</strong></p>
+      <p>A package of components and plugins which provide a customizable API Developer Portal that interacts with the Axway API Manager.</p>
+      <p>Created by <a href="http://www.axway.com" target="_blank">Axway | www.axway.com</a>
+    ]]></description>
+
+    <files folder="packages">
+        <file type="plugin" group="authentication" id="apiportal">plg_authentication_apiportal.zip</file>
+        <file type="plugin" group="system" id="apiportal">plg_system_apiportal.zip</file>
+        <file type="plugin" group="user" id="apiportal">plg_user_apiportal.zip</file>
+        <file type="plugin" group="user" id="regsesid">plg_user_regsesid.zip</file>
+        <file type="plugin" group="menu" id="mainmenu">plg_menu_mainmenu.zip</file>
+        <file type="plugin" group="system" id="akeebaclirequesthandler">plg_system_akeebaclirequesthandler.zip</file>
+        <file type="component" client="site" id="com_apiportal">com_apiportal.zip</file>
+    </files>
+</extension>

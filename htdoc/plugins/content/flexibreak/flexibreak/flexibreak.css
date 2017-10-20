@@ -1,0 +1,181 @@
+/* TOC container */
+div#articleTOC {
+	margin: 10px 0 10px;
+	padding: 0px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #dddddd;
+	border-radius: 0;
+	background-color: #f7f7f7;
+}
+
+
+/* TOC header */
+div#articleTOC p.tocHeader {
+	font-weight: bold;
+	margin: 0;
+	padding: 6px 2px 6px 6px;
+	text-indent:5px;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	border-radius: 0;
+	background-color: #777;
+	color: white;
+}
+
+
+/* TOC list */
+div#articleTOC ul.tocList {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+
+/* TOC list element */
+div#articleTOC ul.tocList li {
+	line-height: 150%;
+	padding: 4px 16px;
+	margin: 0;
+	-webkit-user-select:none !important;
+	-moz-user-select:none !important;
+	user-select:none !important;
+	outline: none !important;
+}
+div#articleTOC ul.tocList li:hover {
+	background: #ddd;
+}
+
+
+/* TOC list element link */
+div#articleTOC ul.tocList li a.tocLink,
+div#articleTOC ul.tocList li a.tocAll {
+	display: block;
+	text-decoration: none;
+	color: #777;
+	-webkit-user-select:none !important;
+	-moz-user-select:none !important;
+	user-select:none !important;
+	outline: none !important;
+}
+
+
+/* TOC list active element & link */
+div#articleTOC ul.tocList li.active {
+	background: #ccc;
+}
+div#articleTOC ul.tocList li.active a {
+	color: #333;
+	font-weight: bold;
+}
+
+
+
+/* Non-active content page container */
+div.articlePage {
+	display: none;
+}
+/* Active content page container */
+div.articlePage.active {
+	display: block;	
+}
+
+
+/* NAV buttons container */
+.tocNav {
+	text-align: left;
+	border: 0px solid;
+	display: inline-block;
+	float: right;
+	margin: 2px 4px 12px 8px;
+}
+
+
+/* NAV buttons common */
+.tocNav .tocPrevNextCnt,
+.tocNav .tocNext,
+.tocNav .tocPrev {
+	margin: 0;
+  padding: 6px 24px;
+	font-weight: bold;
+	font-style: normal;
+  color: #555;
+	text-align: center;
+	text-decoration: none !important;
+	
+	display: inline-block;
+	float: left;
+	min-width: 120px;
+	width: unset;
+	
+	-webkit-user-select:none !important;
+	-moz-user-select:none !important;
+	user-select:none !important;
+	outline: none !important;
+	
+	border-radius: 0;
+	border: 1px solid lightgray;
+	box-shadow: 1px 2px 4px gray;
+}
+
+
+/* NAV buttons BGs */
+.tocNav .tocPrevNextCnt {
+	background-color: #f0f0f0 !important;
+	background: -moz-linear-gradient(top,#f0f0f0,#e0e0e0) !important;
+	background: -webkit-gradient(linear,0 0,0 100%,from(#f0f0f0),to(#e0e0e0)) !important;
+	background: -webkit-linear-gradient(top,#f0f0f0,#e0e0e0) !important;
+	background: -o-linear-gradient(top,#f0f0f0,#e0e0e0) !important;
+	background: linear-gradient(to bottom,#f0f0f0,#e0e0e0) !important;
+}
+.tocNav .tocPrev {
+	padding-left: 20px !important;
+	background-color: #eeeeee !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -moz-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -webkit-gradient(linear,0 0,0 100%,from(#eeeeee),to(#dddddd)) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -webkit-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -o-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, linear-gradient(to bottom,#eeeeee,#dddddd) !important;
+	border-radius: 6px 0 0 6px;
+}
+.tocNav .tocNext {
+	padding-right: 20px !important;
+	background-color: #eeeeee !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -moz-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -webkit-gradient(linear,0 0,0 100%,from(#eeeeee),to(#dddddd)) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -webkit-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -o-linear-gradient(top,#eeeeee,#dddddd) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, linear-gradient(to bottom,#eeeeee,#dddddd) !important;
+	border-radius: 0 6px 6px 0;
+}
+
+
+/* NAV buttons hover  */
+.tocNav a.tocPrev:not(.tocNoPrevNext):hover {
+	padding-left: 20px !important;
+	background-color: #dddddd !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -moz-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -webkit-gradient(linear,0 0,0 100%,from(#dddddd),to(#bbbbbb)) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -webkit-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, -o-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_previous.png) no-repeat 0 center, linear-gradient(to bottom,#dddddd,#bbbbbb) !important;
+	border: 1px solid #aaa;
+}
+.tocNav a.tocNext:not(.tocNoPrevNext):hover {
+	padding-right: 20px !important;
+	background-color: #dddddd !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -moz-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -webkit-gradient(linear,0 0,0 100%,from(#dddddd),to(#bbbbbb)) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -webkit-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, -o-linear-gradient(top,#dddddd,#bbbbbb) !important;
+	background: url(icons/resultset_next.png) no-repeat 99% center, linear-gradient(to bottom,#dddddd,#bbbbbb) !important;
+	border: 1px solid #aaa;
+}
+
+
+/* Disabled look for NAV button */
+.tocNav .tocNoPrevNext {
+  color: #aaa !important;
+  cursor: default !important;
+}

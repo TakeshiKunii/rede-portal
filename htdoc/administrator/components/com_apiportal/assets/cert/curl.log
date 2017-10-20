@@ -1,0 +1,28 @@
+* About to connect() to 10.7.82.171 port 8075 (#1)
+*   Trying 10.7.82.171...
+* Connected to 10.7.82.171 (10.7.82.171) port 8075 (#1)
+* skipping SSL peer certificate verification
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* Server certificate:
+* 	subject: CN=Samples Test Certificate
+* 	start date: Mar 07 15:58:00 2013 GMT
+* 	expire date: Jan 10 10:56:00 2037 GMT
+* 	common name: Samples Test Certificate
+* 	issuer: CN=Samples Test CA
+> GET /api/portal/v1.3/applications HTTP/1.1
+Host: 10.7.82.171:8075
+Accept: */*
+Cookie: APIMANAGERSESSION=0ac5bc73-07ac-444f-a90f-cb0ab5e4ec0a; APIMANAGERSTATIC=644d4c5d-fceb-4b9c-9516-f8bb19cbfe8d
+IsApiPortalRequest: true
+
+< HTTP/1.1 200 OK
+< Date: Fri, 20 Oct 2017 11:17:04 GMT
+< Expires: Fri, 20 Oct 2017 11:17:04 GMT
+< Set-Cookie: APIMANAGERSESSION=0ac5bc73-07ac-444f-a90f-cb0ab5e4ec0a;Version=1;Comment="Session for API Management";Path=/api/portal/v1.3/;Secure;HttpOnly
+< Set-Cookie: APIMANAGERSTATIC=644d4c5d-fceb-4b9c-9516-f8bb19cbfe8d;Version=1;Comment="Session for API Management Static Files";Path=/;Secure;HttpOnly
+< Content-Type: application/json
+< Server: Gateway
+< Connection: close
+< X-CorrelationID: Id-30dbe9596200bbc1aacbbf67 0
+< 
+* Closing connection 1

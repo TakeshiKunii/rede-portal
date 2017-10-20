@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>pkg_shplatform</name>
+	<packagename>shplatform</packagename>
+	<version>2.0.3.1</version>
+	<authorEmail>shaun@shmanic.com</authorEmail>
+	<authorUrl>www.shmanic.com</authorUrl>
+	<author>Shaun Maunder</author>
+	<packagerurl>http://www.shmanic.com/tool/jmapmyldap/file.php?name=pkg_shplatform.zip</packagerurl>
+	<buildDate>Wed Feb 25 18:47:50 2015</buildDate>
+	<description>PKG_SHPLATFORM_DESCRIPTION</description>
+	<files>
+		<file type="component" id="com_shconfig">com_shconfig.zip</file>
+		<file type="library" id="lib_shmanic">lib_shmanic.zip</file>
+		<file type="plugin" id="shplatform" group="system">plg_system_shplatform.zip</file>
+	</files>
+	<updateservers>
+		<server type="collection" priority="2" name="Shmanic Updator"><![CDATA[http://update.shmanic.com/joomla/collection.xml]]></server>
+	</updateservers>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_shplatform.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_shplatform.sys.ini</language>
+	</languages>
+</extension>

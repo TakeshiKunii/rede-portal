@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript">
+            var qp = null;
+            if(window.location.hash) {
+              qp = location.hash.substring(1);
+            }
+            else {
+              qp = location.search.substring(1);
+            }
+            qp = qp ? JSON.parse('{"' + qp.replace(/&/g, '","').replace(/=/g,'":"') + '"}',
+              function(key, value) {
+                return key===""?value:decodeURIComponent(value) }
+              ):{}
+            window.opener.oauthImplObj.onOAuthComplete(qp);
+            window.close();
+        </script>
+    </head>
+    <body></body>
+</html>

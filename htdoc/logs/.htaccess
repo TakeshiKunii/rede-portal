@@ -1,0 +1,9 @@
+<Files "com_apiportal.txt">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "error.php">
+Order Allow,Deny
+Deny from all
+</Files>

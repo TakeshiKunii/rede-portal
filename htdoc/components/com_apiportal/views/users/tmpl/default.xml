@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_APIPORTAL_TITLE_LIST_VIEW_USERS" option="View">
+        <message>COM_APIPORTAL_TITLE_LIST_VIEW_USERS_DESC</message>
+	</layout>
+</metadata>

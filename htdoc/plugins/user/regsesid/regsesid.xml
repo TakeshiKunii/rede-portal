@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method='upgrade'>
+    <name>PLG_USER_REGSESID</name>
+    <creationDate>2017-14-07</creationDate>
+    <author>Axway Software</author>
+    <authorUrl>https://www.axway.com/en/enterprise-solutions/api-management-plus</authorUrl>
+    <version>7.5.4-13</version>
+    <description>PLG_USER_REGSESID_XML_DESC</description>
+    <files folder="plugins/user/regsesid">
+        <filename plugin="regsesid">regsesid.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="administrator/language">
+        <language tag="en-GB">en-GB/en-GB.plg_user_regsesid.sys.ini</language>
+    </languages>
+</extension>

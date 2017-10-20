@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_APIPORTAL_TITLE_LIST_VIEW_USER" option="View">
+        <message>COM_APIPORTAL_TITLE_LIST_VIEW_USER_DESC</message>
+	</layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="layout"
+                type="list"
+                label="COM_APIPORTAL_TITLE_LIST_VIEW_USER_ACTION"
+                description="COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_USAGE_DESC"
+                default="view"
+              >
+              <option value="view">COM_APIPORTAL_TITLE_LIST_VIEW_USER_USAGE_VIEW</option>
+              <option value="edit">COM_APIPORTAL_TITLE_LIST_VIEW_USER_USAGE_EDIT</option>
+            </field>
+            <field
+                name="ep"
+                type="hidden"
+                default="profile-menu"
+            >
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

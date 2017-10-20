@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="authentication" method="upgrade">
+    <name>PLG_AUTHENTICATION_LOGINGUARD</name>
+    <author>Joal Technology</author>
+    <creationDate>Jan 2017</creationDate>
+    <copyright>Copyright (C) 2017 Joal Technology</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>info@joaltechology.com</authorEmail>
+    <authorUrl>www.joaltechology.com</authorUrl>
+    <version>1.1.0</version>
+    <description>PLG_LOGIN_GUARD_DESCRIPTION</description>
+    <files>
+        <filename plugin="loginguard">loginguard.php</filename>
+        <folder>sql</folder>
+        <folder>models</folder>
+        <folder>classes</folder>
+        <folder>libs</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_loginguard.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_loginguard.sys.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/loginguard.install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/loginguard.uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="lock_timeout" type="text"
+                       default="1200"
+                       description="User/Ip lockout value"
+                       label="User / IP Lock timeout value (in seconds)"
+                       size="5"
+                />
+
+                <field name="allowed_login_attempts" type="text"
+                       default="3"
+                       description="Wrong login attempts allowed"
+                       label="Allowed login attempts"
+                       size="5"
+                />
+
+                <field name="lock_by_username" type="checkboxes"
+                       default="1"
+                       description="Lock by Username (uncheck to disable LoginGuard)"
+                       label="Lock by"
+                >
+                    <option value="1">Username</option>
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,93 @@
+body #flexicontent .fc_item_title,
+body #flexicontent .fc_item_title a {
+	color: inherit;
+}
+body #flexicontent .flexi.label,
+body #flexicontent .desc-title.label {
+	background-color: #999999;
+	color: #ffffff;
+	border-radius: 3px;
+}
+.iteminfo .createdline,
+.iteminfo .modifiedline {
+	font-size: 90%;
+	display: block;
+}
+.iteminfo .createdby,
+.iteminfo .modifiedby {
+	font-size: 90%;
+	font-weight: normal;
+	display: inline-block;
+}
+.iteminfo .created,
+.iteminfo .modified {
+	font-size: 90%;
+	font-weight: bold;
+	display: inline-block;
+}
+.itemactions,
+.iteminfo,
+.itemadditionnal,
+.description {
+	margin: 1em 0 1em 0;
+}
+.iteminfo {
+	margin: 1em 0 1em 0.4em;
+}
+.description {
+	clear: both;
+}
+.itemactions span {
+	margin: 0 0 0.5em;
+}
+.itemactions .voting,
+.itemactions .favourites {
+	margin-right: 32px;
+	float: left;
+}
+.itemadditionnal span {
+	margin: 0 0 0.3em;
+}
+.itemadditionnal .categories {
+	display: block;
+}
+.itemadditionnal .tags {
+	display: block;
+}
+.customblock {
+	width: 98% !important;
+	padding: 2px 1% !important;
+	margin: 8px 0px !important;
+	display: block;
+	float: left;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+.customblock .element {
+	max-width: 100% !important;
+	min-width: 50% !important;
+	padding: 3px 0% 3px 0% !important;
+	margin: 0% !important;
+	display: block;
+	float: left;
+	border-width: 0%;
+}
+.customblock .element.singlecol {
+	width: 100% !important;
+	padding: 0% !important;
+}
+.customblock .element.doublecol {
+	width: 48% !important;
+	overflow: hidden;
+}
+.customblock .flexi.value.nolabel {
+	width: 100% !important;
+}
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+.group:after {
+	clear: both;
+}

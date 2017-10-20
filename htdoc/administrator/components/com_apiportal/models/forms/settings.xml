@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <field
+            id="host"
+            name="host"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_HOST"
+            description="COM_APIPORTAL_CONFIGURATION_HOST_DESC"
+            size="10"
+            class="inputbox"
+            default=""
+            required="true"
+            />
+    <field
+            id="port"
+            name="port"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_PORT"
+            description="COM_APIPORTAL_CONFIGURATION_PORT_DESC"
+            size="10"
+            class="inputbox"
+            default=""
+            filter="integer"
+            required="true"
+            />
+    <field
+            id="verifyCrt"
+            name="verifyCrt"
+            type="radio"
+            label="COM_APIPORTAL_CONFIGURATION_VERIFY_CRT"
+            description="COM_APIPORTAL_CONFIGURATION_VERIFY_CRT_DESC"
+            default="0"
+            class="btn-group btn-group-yesno"
+            >
+        <option value="1" yes="JYES">Yes</option>
+        <option value="0">No</option>
+    </field>
+    <field
+            id="cert"
+            name="cert"
+            type="file"
+            label="COM_APIPORTAL_CONFIGURATION_CRT"
+            description="COM_APIPORTAL_CONFIGURATION_CRT_DESC"
+            ></field>
+    <field
+            id="certFileName"
+            name="certFileName"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_VERIFY_CRT_FILE_NAME"
+            description="COM_APIPORTAL_CONFIGURATION_VERIFY_CRT_FILE_NAME_DESC"
+            class="inputbox"
+            disabled="true"
+            />
+    <field
+            id="verifySslHost"
+            name="verifySslHost"
+            type="radio"
+            label="COM_APIPORTAL_CONFIGURATION_VERIFY_HOSTNAME"
+            description="COM_APIPORTAL_CONFIGURATION_VERIFY_HOSTNAME_DESC"
+            default="0"
+            class="btn-group btn-group-yesno"
+            >
+        <option value="1" yes="JYES">Yes</option>
+        <option value="0">No</option>
+    </field>
+    
+    <field
+            id="oauthPath"
+            name="oauthPath"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_AUTH_PATH"
+            description="COM_APIPORTAL_CONFIGURATION_AUTH_PATH_DESC"
+            size="10"
+            class="inputbox"
+            default=""
+            />
+    <field
+            id="oauthPort"
+            name="oauthPort"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_AUTH_PORT"
+            description="COM_APIPORTAL_CONFIGURATION_AUTH_PORT_DESC"
+            size="10"
+            class="inputbox"
+            default=""
+            />
+    <field
+            id="isSsoOn"
+            name="isSsoOn"
+            type="radio"
+            label="COM_APIPORTAL_CONFIGURATION_SSO_IS_ON"
+            description="COM_APIPORTAL_CONFIGURATION_SSO_IS_ON_DESC"
+            default="0"
+            class="btn-group btn-group-yesno"
+    >
+        <option value="1" yes="JYES">Yes</option>
+        <option value="0">No</option>
+    </field>
+    <field
+            id="ssoPath"
+            name="ssoPath"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_SSO_PATH"
+            description="COM_APIPORTAL_CONFIGURATION_SSO_PATH_DESC"
+            size="10"
+            class="inputbox"
+            default="sso"
+    />
+    <field
+            id="ssoEntityID"
+            name="ssoEntityID"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_SSO_ENTITY_ID"
+            description="COM_APIPORTAL_CONFIGURATION_SSO_ENTITY_ID_DESC"
+            size="10"
+            class="inputbox"
+            default=""
+    />
+    
+    <field
+            id="publicApi"
+            name="publicApi"
+            type="radio"
+            label="COM_APIPORTAL_CONFIGURATION_PUBLICAPI"
+            description="COM_APIPORTAL_CONFIGURATION_PUBLICAPI_DESC"
+            default="0"
+            class="btn-group btn-group-yesno"
+            >
+        <option value="1" yes="JYES">Yes</option>
+        <option value="0">No</option>
+    </field>
+    
+    <field
+            id="publicApiAccountLoginName"
+            name="publicApiAccountLoginName"
+            type="text"
+            label="COM_APIPORTAL_CONFIGURATION_PUBLIC_API_ACCOUNT_LOGIN_NAME"
+            class="inputbox"
+            default=""
+            required="true">
+      </field>
+    
+    <field
+            id="publicApiAccountPassword"
+            name="publicApiAccountPassword"
+            type="password"
+            label="COM_APIPORTAL_CONFIGURATION_PUBLICAPI_ACCOUNT_PASSWORD"
+           	class="inputbox"
+           	default=""
+            required="true">
+     </field>
+    
+</form>

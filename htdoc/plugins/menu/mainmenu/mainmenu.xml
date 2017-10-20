@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="menu" method="upgrade">
+	<name>PLG_MENU_MAINMENU</name>
+	<creationDate>2017-14-07</creationDate>
+    <author>Axway Software</author>
+    <authorUrl>https://www.axway.com/en/enterprise-solutions/api-management-plus</authorUrl>
+    <version>7.5.4-13</version>
+    <description>PLG_MENU_MAINMENU_XML_DESCRIPTION</description>
+    <files folder="plugins/menu/mainmenu">
+        <filename plugin="mainmenu">mainmenu.php</filename>
+    </files>
+    <languages folder="administrator/language">
+        <language tag="en-GB">en-GB/en-GB.plg_menu_mainmenu.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_menu_mainmenu.sys.ini</language>
+    </languages>
+</extension>

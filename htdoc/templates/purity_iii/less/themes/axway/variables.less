@@ -1,0 +1,433 @@
+/**
+ * Basic colors
+ */
+@black:                 	#000000;
+@white:                 	#FFFFFF;
+@gray:                  	#AAAAAA;
+
+/**
+ * Predefined custom colors
+ */
+@colorMagnum:           	#3D4051;
+@colorBlueSteel:        	#407CA0;
+
+@colorBlaze:            	#ED272E;
+@colorCarmine:          	#AC0033;
+@colorPlum:             	#701C45;
+@colorTar:              	#10181F;
+@colorCoal:             	#555559;
+@colorHammer:           	#989998;
+@colorFlint:            	#E9EAEA;
+@colorFeather:          	#F3F4F4;
+
+@colorAstral:           	#2A7AB0;
+@colorLightSkyBlue:     	#89C4F4;
+@colorPattensBlue:      	#E4F1FE;
+
+@colorCornHarvest:      	#8D6708;
+@colorSaffron:          	#F9BF3B;
+@colorLemonChiffon:     	#FFFACD;
+
+@colorDarkGreen:        	#005500;
+@colorFruitSalad:       	#54A75F;
+@colorPeppermint:       	#E4F9DE;
+
+@colorDarkRed:          	#8B0000;
+@colorRed:              	#FF0000;
+@colorMistyRose:        	#FFE3E0;
+
+
+@error-label-color:			@colorRed;
+@error-border-color:		@colorRed;
+@error-bg-color:			@colorMistyRose;
+@warning-border-color:		@colorSaffron;
+@warning-bg-color:			@colorLemonChiffon;
+@info-border-color:			@colorLightSkyBlue;
+@info-bg-color:				@colorPattensBlue;
+@success-border-color:		@colorFruitSalad;
+@success-bg-color:			@colorPeppermint;
+
+
+/**
+ * Key colors and units
+ */
+@brand-color: #D11F46;
+@neutral-color: 			#F3F4F4; // @colorFeather
+@ui-control-color: 			#407CA0; // @colorBlueSteel
+
+@unit: 7px;
+
+// COLORS (BASIC)
+
+@menu-color: @white;
+@menu-text-color: #2e2e2e;
+@menu-selected-color: @white;
+@page-color: @white;
+@page-text-color: mix(black, @neutral-color, 80%);
+@page-title-color: mix(black, @neutral-color, 80%);
+@footer-color: @neutral-color;
+@footer-text-color: mix(black, @neutral-color, 30%);
+@table-header-color: @neutral-color;
+@table-header-text-color: @page-text-color;
+@button-color: @page-color;
+@button-text-color: @page-text-color;
+@primary-button-color: @ui-control-color;
+@primary-button-text-color: @white;
+@widget-border-color: darken(@neutral-color, 10%);
+@table-border-color: darken(@neutral-color, 4%);
+@focus-color: darken(@aap-border-color, 50%);
+
+// GLOBAL TYPOGRAPHY
+
+// Global font face
+@aap-base-font-family: 'Roboto', sans-serif;
+// Body font size
+@aap-base-font-size: 14px;
+// Button label font size
+@aap-button-font-size: 15px;
+
+// HEADINGS
+
+// Heading section of the page
+// left and right colors, opacity and background image
+@aap-page-heading-left-color: @brand-color;
+@aap-page-heading-left-color-opacity: 50%;
+@aap-page-heading-right-color: #407CA0; // @colorBlueSteel
+@aap-page-heading-right-color-opacity: 50%;
+@aap-page-heading-background-color: @brand-color;
+@aap-page-heading-background-image: url(/components/com_apiportal/assets/img/abstract.jpg);
+// H1 Page title font size
+@aap-page-title-font-size: 42px;
+// H1 Page title font family
+@aap-page-title-font-family: "Roboto",sans-serif;
+// H1 Page title color
+@aap-page-title-color: @page-title-color;
+// H3 Dialog title font size
+@aap-dialog-title-font-size: 20px;
+// Tab font size
+@aap-navtab-font-size: 14px;
+
+
+// MENU BAR TYPO
+
+// Menu bar height
+@aap-mainnav-height: 65px;
+// Font face
+@aap-mainnav-font-family: "Roboto",sans-serif;
+// Font size
+@aap-mainnav-font-size: 14px;
+// Sub item height
+@aap-subnav-item-height: 35px;
+// Sub item font size
+@aap-subnav-font-size: 14px;
+
+// MENU BAR COLOR
+
+// Normal background top color
+@aap-mainnav-top-color: @menu-color;
+// Normal background bottom color
+@aap-mainnav-bottom-color: @menu-color;
+// Normal text color
+@aap-mainnav-text-color: @menu-text-color;
+// Hover background top color
+@aap-mainnav-hover-top-color: @menu-color;
+// Hover background bottom color
+@aap-mainnav-hover-bottom-color: @menu-color;
+// Hover text color
+@aap-mainnav-hover-text-color: @menu-text-color;
+// Selected background top color
+@aap-mainnav-selected-top-color: @menu-color;
+// Selected background bottom color
+@aap-mainnav-selected-bottom-color: @menu-color;
+// Selected text color
+@aap-mainnav-selected-text-color: @menu-text-color;
+// Sub item normal background color
+@aap-subnav-bg-color: @menu-color;
+// Sub item normal text color
+@aap-subnav-text-color: @menu-text-color;
+// Sub item hover background color
+@aap-subnav-hover-bg-color: @menu-color;
+// Sub item hover text color
+@aap-subnav-hover-text-color: @menu-text-color;
+// Sub item selected background color
+@aap-subnav-selected-bg-color: @menu-color;
+// Sub item selected text color
+@aap-subnav-selected-text-color: @menu-text-color;
+
+// GLOBAL COLOR
+
+// Page background color
+@aap-bg-color: #fdfdfd;
+// Object border color
+@aap-border-color: @widget-border-color;
+// Body text color
+@aap-text-color: @page-text-color;
+// Focus color
+@aap-focus-color: @focus-color;
+// Disabled border color
+@aap-disabled-border-color: mix(@page-color, contrast(@page-color), 81%);
+// Disabled background color
+@aap-disabled-bg-color: mix(@page-color, contrast(@page-color), 96%);
+// Disabled text color
+@aap-disabled-text-color: mix(@page-text-color, contrast(@page-text-color), 39%);
+
+// BUTTON COLOR
+
+// Basic button normal border color (default mix(black, @button-color, 19%))
+@aap-button-border-color: mix(black, @button-color, 19%);
+// Basic button normal background color (default @button-color)
+@aap-button-bg-color: @button-color;
+// Basic button normal text color (default @button-text-color)
+@aap-button-text-color: @button-text-color;
+// Basic button hover border color
+@aap-button-hover-border-color: mix(black, @button-color, 33%);
+// Basic button hover background color
+@aap-button-hover-bg-color: mix(black, @button-color, 12%);
+// Basic button hover text color
+@aap-button-hover-text-color: @button-text-color;
+// Basic button selected border color
+@aap-button-selected-border-color: mix(black, @button-color, 33%);
+// Basic button selected background color
+@aap-button-selected-bg-color: mix(black, @button-color, 12%);
+// Basic button selected text color
+@aap-button-selected-text-color: @button-text-color;
+// Basic button disabled border color (default @aap-disabled-border-color)
+@aap-button-disabled-border-color: @aap-disabled-border-color;
+// Basic button disabled background color (default @aap-disabled-bg-color)
+@aap-button-disabled-bg-color: @aap-disabled-bg-color;
+// Basic button disabled text color (default @aap-disabled-text-color)
+@aap-button-disabled-text-color: @aap-disabled-text-color;
+
+// Primary button normal border color
+@aap-primary-button-border-color: mix(black, @primary-button-color, 43%);
+// Primary button normal background color
+@aap-primary-button-bg-color: @primary-button-color;
+// Primary button normal text color
+@aap-primary-button-text-color: @primary-button-text-color;
+// Primary button hover border color
+@aap-primary-button-hover-border-color: mix(black, @primary-button-color, 63%);
+// Primary button hover background color
+@aap-primary-button-hover-bg-color: mix(white, @primary-button-color, 19%);
+// Primary button hover text color
+@aap-primary-button-hover-text-color: @primary-button-text-color;
+// Primary button selected border color
+@aap-primary-button-selected-border-color: mix(black, @primary-button-color, 63%);
+// Primary button selected background color
+@aap-primary-button-selected-bg-color: @primary-button-color;
+// Primary button selected text color
+@aap-primary-button-selected-text-color: @primary-button-text-color;
+// Primary button disabled border color
+@aap-primary-button-disabled-border-color: mix(@page-color, contrast(@page-color), 30%);
+// Primary button disabled background color
+@aap-primary-button-disabled-bg-color: mix(@page-color, contrast(@page-color), 46%);
+// Primary button disabled text color
+@aap-primary-button-disabled-text-color: @page-text-color;
+
+// LINK COLOR
+
+// Normal color
+@aap-link-color: @primary-button-color;
+// Hover color
+@aap-link-hover-color: darken(@aap-link-color, 20%);
+// Selected color
+@aap-link-selected-color: @aap-link-hover-color;
+// Disabled color (default @aap-disabled-text-color)
+@aap-link-disabled-color: @aap-disabled-text-color;
+
+// DROP DOWN COLOR
+
+// Normal border color (default @widget-border-color)
+@aap-dropdown-border-color: @widget-border-color;
+// Normal background color
+@aap-dropdown-bg-color: @page-color;
+// Normal text color
+@aap-dropdown-text-color: mix(black, @neutral-color, 69%);
+// Hover background color
+@aap-dropdown-hover-bg-color: mix(black, @page-color, 4%);
+// Hover text color
+@aap-dropdown-hover-text-color: mix(black, @neutral-color, 69%);
+// Selected background color
+@aap-dropdown-selected-bg-color: mix(black, @page-color, 11%);
+// Selected text color
+@aap-dropdown-selected-text-color: mix(black, @brand-color, 30%);
+// Disabled background color (default @aap-dropdown-bg-color)
+@aap-dropdown-disabled-bg-color: @aap-dropdown-bg-color;
+// Disabled text color (default @aap-disabled-text-color)
+@aap-dropdown-disabled-text-color: @aap-disabled-text-color;
+
+// TAB COLOR
+
+// Border color (default @widget-border-color)
+@aap-navtab-border-color: @widget-border-color;
+// Normal background color
+@aap-navtab-bg-color: mix(black, @page-color, 5%);
+// Normal text color
+@aap-navtab-color: mix(white, @page-text-color, 10%);
+// Hover background color
+@aap-navtab-hover-bg-color: @page-color;
+// Hover text color
+@aap-navtab-hover-color: mix(white, @page-text-color, 10%);
+// Selected background color (default @aap-bg-color)
+@aap-navtab-selected-bg-color: @page-color;
+// Selected text color
+@aap-navtab-selected-color: mix(white, @page-text-color, 27%);
+// Disabled background color (default @aap-disabled-bg-color)
+@aap-navtab-disabled-bg-color: @aap-disabled-bg-color;
+// Disabled text color (default @aap-disabled-text-color)
+@aap-navtab-disabled-color: @aap-disabled-text-color;
+
+// FORM FIELD COLOR
+
+// Normal border color (default @widget-border-color)
+@aap-field-border-color: darken(@aap-border-color, 25%);
+// Normal background color (default @page-color)
+@aap-field-bg-color: @page-color;
+// Hover border color (default darken(@aap-border-color, 36%))
+@aap-field-hover-border-color: darken(@aap-border-color, 50%);
+// Disabled border color (default @aap-disabled-border-color)
+@aap-field-disabled-border-color: @aap-disabled-border-color;
+// Disabled background color (default @aap-disabled-bg-color)
+@aap-field-disabled-bg-color: @aap-disabled-bg-color;
+// Disabled text color (default @aap-disabled-text-color)
+@aap-field-disabled-text-color: @aap-disabled-text-color;
+
+// TABLE COLOR
+
+// Border color (default @widget-border-color)
+@aap-table-border-color: @table-border-color;
+// Header normal background color
+@aap-th-bg-color: @table-header-color;
+// Header normal text color
+@aap-th-text-color: @table-header-text-color;
+// Header hover background color
+@aap-th-hover-bg-color: darken(@table-header-color, 4%);
+// Header hover text color
+@aap-th-hover-text-color: @table-header-text-color;
+// Header selected background color
+@aap-th-selected-bg-color: darken(@table-header-color, 7%);
+// Header selected text color
+@aap-th-selected-text-color: @table-header-text-color;
+// Row normal odd background color
+@aap-tr-odd-bg-color: @page-color;
+// Row normal even background color
+@aap-tr-even-bg-color: @page-color;
+// Row normal text color
+@aap-tr-text-color: @page-text-color;
+// Row hover background color
+@aap-tr-hover-bg-color: mix(white, @brand-color, 80%);
+// Row hover text color
+@aap-tr-hover-text-color: mix(white, @page-text-color, 10%);
+// Row selected background color
+@aap-tr-selected-bg-color: lighten(@neutral-color, 5%);
+// Row selected text color
+@aap-tr-selected-text-color: @page-text-color;
+// Row disabled background color (default @aap-tr-odd-bg-color)
+@aap-tr-disabled-bg-color: @aap-tr-odd-bg-color;
+// Row disabled text color (default @aap-disabled-text-color)
+@aap-tr-disabled-text-color: @aap-disabled-text-color;
+// Border color
+@aap-footer-border-color: transparent; //mix(black, @footer-color, 8%);
+
+// SPOTLIGHT
+
+// Spotlight background color
+@t3-spotlight-background: @aap-box-bg-color;
+// Spotlight text color
+@t3-spotlight-text-color: @aap-text-color;
+
+/////////////////////////////////////////////
+
+// UPDATE DEPENDENT VARIABLES
+
+// Subtitle font size set to body font size
+@aap-subtitle-font-size: @aap-base-font-size - 1px;
+// H2 Section title font size relative to body font size
+@aap-section-title-font-size: @aap-base-font-size + 1px;
+// H2 Section title text color relative to page title color
+@aap-section-title-color: @aap-page-title-color;
+// H3 Dialog title font set to page title font
+@aap-dialog-title-font-family: @aap-page-title-font-family;
+// H3 Dialog title color set to page title color
+@aap-dialog-title-color: @aap-page-title-color;
+// Light text for supplementary labels
+@aap-light-text-color: lighten(@aap-text-color, 33%);
+// Containers and boxes background color
+@aap-box-bg-color: darken(@aap-bg-color, 4%);
+// Containers and boxes border color
+@aap-box-border-color: @aap-border-color;
+
+@font-family-base-custom: @aap-base-font-family;
+@headings-font-family-custom: @aap-page-title-font-family;
+
+
+
+
+
+
+
+
+
+
+
+
+// Reuse from ThemeMagic with the following defaults
+
+// VISUAL
+
+// Base radius
+@border-radius-base: 0px;
+// Large radius
+@border-radius-large: 0px;
+// Small radius
+@border-radius-small: 0px;
+
+// MODULE
+
+// Background color
+@t3-module-bg: transparent;
+// Text color
+@t3-module-color: inherit;
+// Title background color
+@t3-module-title-bg: @t3-module-bg;
+// Title text color
+@t3-module-title-color: @t3-module-color;
+
+// FOOTER
+
+// Background color
+@t3-footer-background: @footer-color;
+// Text color
+@t3-footer-text-color: @footer-text-color;
+// Footer module background color
+@t3-footer-module-background: @t3-footer-background;
+// Footer module text color
+@t3-footer-module-text-color: @t3-footer-text-color;
+// Footer module title color
+@t3-footer-module-title-color: @text-color;
+
+
+// GRID
+
+// Large desktop width
+@container-lg: 1170px;
+// Desktop width
+@container-md: 970px;
+// Tablet width
+@container-sm: 750px;
+// Gutter width
+@grid-gutter-width: 30px;
+
+
+// UPDATE RELATED T3 & BOOTSTRAP VARIABLES
+
+// Inherit from AAP variables
+@headings-color: @aap-page-title-color;
+@navbar-height: @aap-mainnav-height;
+@font-size-base: @aap-base-font-size;
+@brand-primary: @aap-primary-button-bg-color;
+@body-bg: @aap-bg-color;
+@text-color: @aap-text-color;
+@headings-color: @aap-page-title-color;
+@link-color: @aap-link-color;
+@font-family-base: @aap-base-font-family;
+@headings-font-family: @aap-page-title-font-family;

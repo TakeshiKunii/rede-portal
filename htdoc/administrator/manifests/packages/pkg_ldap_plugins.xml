@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>pkg_ldap_plugins</name>
+	<packagename>ldap_plugins</packagename>
+	<version>2.0.3.1</version>
+	<authorEmail>shaun@shmanic.com</authorEmail>
+	<authorUrl>www.shmanic.com</authorUrl>
+	<author>Shaun Maunder</author>
+	<packagerurl>http://www.shmanic.com/tool/jmapmyldap/file.php?name=pkg_ldap_plugins.zip</packagerurl>
+	<buildDate>Wed Feb 25 18:47:50 2015</buildDate>
+	<description>PKG_LDAP_PLUGINS_DESCRIPTION</description>
+	<files>
+		<file type="plugin" id="creation" group="ldap">plg_ldap_creation.zip</file>
+		<file type="plugin" id="deletion" group="ldap">plg_ldap_deletion.zip</file>
+		<file type="plugin" id="injection" group="ldap">plg_ldap_injection.zip</file>
+		<file type="plugin" id="mapping" group="ldap">plg_ldap_mapping.zip</file>
+		<file type="plugin" id="password" group="ldap">plg_ldap_password.zip</file>
+		<file type="plugin" id="profile" group="ldap">plg_ldap_profile.zip</file>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_ldap_plugins.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.pkg_ldap_plugins.sys.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="authentication" method="upgrade">
+    <name>PLG_AUTHENTICATION_APIPORTAL</name>
+    <creationDate>2017-14-07</creationDate>
+    <author>Axway Software</author>
+    <authorUrl>https://www.axway.com/en/enterprise-solutions/api-management-plus</authorUrl>
+    <version>7.5.4-13</version>
+    <description>PLG_AUTHENTICATION_APIPORTAL_XML_DESC</description>
+    <files folder="plugins/authentication/apiportal">
+        <filename plugin="apiportal">apiportal.php</filename>
+            <filename>index.html</filename>
+    </files>
+    <languages folder="administrator/language">
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_apiportal.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_apiportal.sys.ini</language>
+    </languages>
+</extension>

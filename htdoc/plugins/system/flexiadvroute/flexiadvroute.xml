@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6" group="system" method="upgrade">
+	<name>System - Flexiadvroute, routing tasks</name>
+	<author>Emmanuel Danan</author>
+	<creationDate>July 2010</creationDate>
+	<copyright>Copyright (C) 2010 Emmanuel Danan</copyright>
+	<license>GNU/GPL v2</license>
+	<authorEmail>emmanuel@vistamedia.fr</authorEmail>
+	<authorUrl>www.vistamedia.fr</authorUrl>
+	<version>2.0</version>
+	<description>System Plugin for FLEXIcontent Advanced Routing</description>
+	
+	<files>
+		<filename plugin="flexiadvroute">flexiadvroute.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_flexiadvroute.ini</language>
+	</languages>
+	<config>
+	<fields name="params"  addfieldpath="/administrator/components/com_flexicontent/elements">
+		<fieldset name="basic">
+			<field name="" type="separator" default="Hide categories" level="level2" />
+			<field name="" type="separator" default="Hide Categories from Pathway/URLs for Types &lt;small&gt; &lt;br&gt; - These are types that contain content not being a part of structure but rather general information content like site usage instructions or license agreement, etc &lt;/small&gt;" level="level3" class="alert alert-info" />
+			<field name="route_to_type" type="radio" default="0" label="Enable" description="..." class="btn-group btn-group-yesno">
+				<option value="0">FLEXI_NO</option>
+				<option value="1">FLEXI_YES</option>
+			</field>
+			<field name="type_to_route" type="types" multiple="true" default="" label="Content Types" description="..." class="use_select2_lib" size="12" />
+		
+			<field name="" type="separator" default="Hide categories in Content / Content Listings by NOT displaying: &lt;br&gt; &lt;small&gt; &amp;nbsp; a. direct category links &lt;br&gt; &amp;nbsp; b. category title as a content/content list markup &lt;br&gt; - These categories are for special purposes, e.g. contain items &lt;b&gt;displayed&lt;/b&gt; in frontpage or in a module Slideshow. &lt;/small&gt;" level="level3" class="alert alert-info" />
+			<field name="cats_to_exclude" type="flexicategories" multiple="true" size="24" default="" label="FLEXI_CATEGORIES" description="FLEXI_ADVROUTE_CATS_TO_EXCLUDE_DESC" />
+		
+		</fieldset>
+	</fields>
+	</config>
+</extension>

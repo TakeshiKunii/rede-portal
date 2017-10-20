@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="thememagic" addfieldpath="/plugins/system/t3/includes/depend">
+
+	<fieldset name="key_colors_params" label="AAP_SECTION_KEY_COLORS">
+	  <field name="brand-color" type="color" default="#30afd6" class="t3tm-color" label="@brand-color" description="AAP_KEY_BRAND_COLOR_DESC"/>
+	  <field name="neutral-color" type="color" default="#aaaaaa" class="t3tm-color" label="@neutral-color" description="AAP_KEY_NEUTRAL_COLOR_DESC"/>
+	</fieldset>
+
+	<fieldset name="colors_basic_params" label="AAP_SECTION_COLORS_BASIC">
+	  <field name="menu-color" type="color" default="@white" class="t3tm-color" label="@menu-color" description="AAP_BASIC_MENU_COLOR_DESC"/>
+	  <field name="menu-text-color" type="color" default="#2e2e2e" class="t3tm-color" label="@menu-text-color" description="AAP_BASIC_MENU_TEXT_COLOR_DESC"/>
+	  <field name="menu-selected-color" type="color" default="@white" class="t3tm-color" label="@menu-selected-color" description="AAP_BASIC_MENU_SELECTED_COLOR_DESC"/>
+	  <field name="page-color" type="color" default="@white" class="t3tm-color" label="@page-color" description="AAP_BASIC_PAGE_COLOR_DESC"/>
+	  <field name="page-text-color" type="color" default="mix(black, @neutral-color, 80%)" class="t3tm-color" label="@page-text-color" description="AAP_BASIC_PAGE_TEXT_COLOR_DESC"/>
+	  <field name="page-title-color" type="color" default="mix(black, @neutral-color, 80%)" class="t3tm-color" label="@page-title-color" description="AAP_BASIC_PAGE_TITLE_COLOR_DESC"/>
+	  <field name="footer-color" type="color" default="@neutral-color" class="t3tm-color" label="@footer-color" description="AAP_BASIC_FOOTER_COLOR_DESC"/>
+	  <field name="footer-text-color" type="color" default="mix(black, @neutral-color, 30%)" class="t3tm-color" label="@footer-text-color" description="AAP_BASIC_FOOTER_TEXT_COLOR_DESC"/>
+	  <field name="table-header-color" type="color" default="@neutral-color" class="t3tm-color" label="@table-header-color" description="AAP_BASIC_TABLE_HEADER_COLOR_DESC"/>
+	  <field name="table-header-text-color" type="color" default="@page-text-color" class="t3tm-color" label="@table-header-text-color" description="AAP_BASIC_TABLE_HEADER_TEXT_COLOR_DESC"/>
+	  <field name="table-border-color" type="color" default="darken(@neutral-color, 4%);" class="t3tm-color" label="@table-border-color-color" description="AAP_BASIC_TABLE_BORDER_COLOR_DESC"/>
+	  <field name="button-color" type="color" default="@page-color" class="t3tm-color" label="@button-color" description="AAP_BASIC_BUTTON_COLOR_DESC"/>
+	  <field name="button-text-color" type="color" default="@page-text-color" class="t3tm-color" label="@button-text-color" description="AAP_BASIC_BUTTON_TEXT_COLOR_DESC"/>
+	  <field name="primary-button-color" type="color" default="@ui-control-color" class="t3tm-color" label="@primary-button-color" description="AAP_BASIC_PRIMARY_BUTTON_COLOR_DESC"/>
+	  <field name="primary-button-text-color" type="color" default="@white" class="t3tm-color" label="@primary-button-text-color" description="AAP_BASIC_PRIMARY_BUTTON_TEXT_COLOR_DESC"/>
+	  <field name="widget-border-color" type="color" default="darken(@neutral-color, 10%)" class="t3tm-color" label="@widget-border-color" description="AAP_BASIC_WIDGET_BORDER_COLOR_DESC"/>
+	  <field name="focus-color" type="color" default="darken(@aap-border-color, 50%)" class="t3tm-color" label="@focus-color" description="AAP_BASIC_FOCUS_COLOR_DESC"/>
+	</fieldset>
+
+    <fieldset name="global_typo_params" label="AAP_SECTION_GLOBAL_TYPO">
+      <field name="aap-base-font-family" type="text" default="'Roboto',sans-serif" size="30" class="t3tm-font" label="AAP_BASE_FONT_FAMILY_LABEL" description="AAP_BASE_FONT_FAMILY_DESC" />
+      <field name="aap-base-font-size" type="text" default="14px" size="10" class="input-tiny t3tm-dimension" label="AAP_BASE_FONT_SIZE_LABEL" description="AAP_BASE_FONT_SIZE_DESC" />
+      <field name="aap-button-font-size" type="text" default="15px" size="10" class="input-tiny t3tm-dimension" label="AAP_BUTTON_FONT_SIZE_LABEL" description="AAP_BUTTON_FONT_SIZE_DESC" />
+    </fieldset>
+
+    <fieldset name="page_heading_params" label="AAP_SECTION_PAGE_HEADING">
+      <field name="aap-page-heading-left-color" type="color" default="@brand-color" class="t3tm-color" label="AAP_PAGE_HEADING_LEFT_COLOR_LABEL" description="AAP_PAGE_HEADING_LEFT_COLOR_DESC" />
+      <field name="aap-page-heading-left-color-opacity" type="text" default="50%" size="10" class="input-tiny t3tm-dimension" label="AAP_PAGE_HEADING_LEFT_COLOR_OPACITY_LABEL" description="AAP_PAGE_HEADING_LEFT_COLOR_OPACITY_DESC" />
+      <field name="aap-page-heading-right-color" type="color" default="#407CA0" class="t3tm-color" label="AAP_PAGE_HEADING_RIGHT_COLOR_LABEL" description="AAP_PAGE_HEADING_RIGHT_COLOR_DESC" />
+      <field name="aap-page-heading-right-color-opacity" type="text" default="50%" size="10" class="input-tiny t3tm-dimension" label="AAP_PAGE_HEADING_RIGHT_COLOR_OPACITY_LABEL" description="AAP_PAGE_HEADING_RIGHT_COLOR_OPACITY_DESC" />
+      <field name="aap-page-heading-background-color" type="color" default="@brand-color" class="t3tm-color" label="AAP_PAGE_HEADING_BG_COLOR_LABEL" description="AAP_PAGE_HEADING_BG_COLOR_DESC" />
+      <field name="aap-page-heading-background-image" type="text" value="url(/components/com_apiportal/assets/img/abstract.jpg)" default="url(/components/com_apiportal/assets/img/abstract.jpg)" label="AAP_PAGE_HEADING_BG_IMG_LABEL" description="AAP_PAGE_HEADING_BG_IMG_DESC" />
+    </fieldset>
+
+    <fieldset name="headings_params" label="AAP_SECTION_HEADINGS">
+      <field name="aap-page-title-font-size" type="text" default="42px" size="10" class="input-tiny t3tm-dimension" label="AAP_PAGE_TITLE_FONT_SIZE_LABEL" description="AAP_PAGE_TITLE_FONT-SIZE_DESC" />
+      <field name="aap-page-title-font-family" type="text" default="'Roboto',sans-serif" size="30" class="t3tm-font" label="AAP_PAGE_TITLE_FONT_FAMILY_LABEL" description="AAP_PAGE_TITLE_FONT-FAMILY_DESC" />
+      <!-- the following field is not necessary:
+      <field name="aap-page-title-color" type="color" default="@page-title-color" class="t3tm-color" label="AAP_PAGE_TITLE_COLOR_LABEL" description="AAP_PAGE_TITLE_COLOR_DESC" /-->
+      <field name="aap-dialog-title-font-size" type="text" default="20px" size="10" class="input-tiny t3tm-dimension" label="AAP_DIALOG_TITLE_FONT_SIZE_LABEL" description="AAP_DIALOG_TITLE_FONT-SIZE_DESC" />
+      <field name="aap-navtab-font-size" type="text" default="14px" size="10" class="input-tiny t3tm-dimension" label="AAP_NAVTAB_FONT_SIZE_LABEL" description="AAP_NAVTAB_FONT_SIZE_DESC" />
+    </fieldset>
+
+	<fieldset name="global_color_params" label="AAP_SECTION_GLOBAL_COLOR">
+	  <field name="aap-bg-color" type="color" default="#fdfdfd" class="t3tm-color" label="AAP_BG_COLOR_LABEL" description="AAP_BG_COLOR_DESC" />
+	  <field name="aap-border-color" type="color" default="@widget-border-color" class="t3tm-color" label="AAP_BORDER_COLOR_LABEL" description="AAP_BORDER_COLOR_DESC" />
+	  <!-- the following field is not necessary:
+	  <field name="aap-text-color" type="color" default="@page-text-color" class="t3tm-color" label="AAP_TEXT_COLOR_LABEL" description="AAP_TEXT_COLOR_DESC" /-->
+	  <!-- the following field is not necessary:
+	  <field name="aap-focus-color" type="color" default="@focus-color" class="t3tm-color" label="AAP_FOCUS_COLOR_LABEL" description="AAP_FOCUS_COLOR_DESC" /-->
+	  <field name="aap-disabled-border-color" type="color" default="mix(@page-color, contrast(@page-color), 81%)" class="t3tm-color" label="AAP_DISABLED_BORDER_COLOR_LABEL" description="AAP_DISABLED_BORDER_COLOR_DESC" />
+	  <field name="aap-disabled-bg-color" type="color" default="mix(@page-color, contrast(@page-color), 96%)" class="t3tm-color" label="AAP_DISABLED_BG_COLOR_LABEL" description="AAP_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-disabled-text-color" type="color" default="mix(@page-text-color, contrast(@page-text-color), 39%)" class="t3tm-color" label="AAP_DISABLED_TEXT_COLOR_LABEL" description="AAP_DISABLED_TEXT_COLOR_DESC" />
+	</fieldset>
+
+    <fieldset name="nav_typo_params" label="AAP_SECTION_NAV_TYPO">
+      <field name="aap-mainnav-height" type="text" default="65px" size="10" class="input-tiny t3tm-dimension" label="AAP_MAINNAV_HEIGHT_LABEL" description="AAP_MAINNAV_HEIGHT_DESC" />
+      <field name="aap-mainnav-font-family" type="text" default="'Roboto',sans-serif" size="30" class="t3tm-font" label="AAP_MAINNAV_FONT_FAMILY_LABEL" description="AAP_MAINNAV_FONT_FAMILY_DESC" />
+      <field name="aap-mainnav-font-size" type="text" default="14px" size="10" class="input-tiny t3tm-dimension" label="AAP_MAINNAV_FONT_SIZE_LABEL" description="AAP_MAINNAV_FONT_SIZE_DESC" />
+      <field name="aap-subnav-item-height" type="text" default="35px" size="10" class="input-tiny t3tm-dimension" label="AAP_SUBNAV_ITEM_HEIGHT_LABEL" description="AAP_SUBNAV_ITEM_HEIGHT_DESC" />
+      <field name="aap-subnav-font-size" type="text" default="14px" size="10" class="input-tiny t3tm-dimension" label="AAP_SUBNAV_FONT_SIZE_LABEL" description="AAP_SUBNAV_FONT_SIZE_DESC" />
+    </fieldset>
+
+    <fieldset name="nav_color_params" label="AAP_SECTION_NAV_COLOR">
+      <field name="aap-mainnav-top-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_MAINNAV_TOP_COLOR_LABEL" description="AAP_MAINNAV_TOP_COLOR_DESC" />
+      <field name="aap-mainnav-bottom-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_MAINNAV_BOTTOM_COLOR_LABEL" description="AAP_MAINNAV_BOTTOM_COLOR_DESC" />
+      <field name="aap-mainnav-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_MAINNAV_TEXT_COLOR_LABEL" description="AAP_MAINNAV_TEXT_COLOR_DESC" />
+      <field name="aap-mainnav-hover-top-color" type="color" default="transparent" class="t3tm-color" label="AAP_MAINNAV_HOVER_TOP_COLOR_LABEL" description="AAP_MAINNAV_HOVER_TOP-COLOR_DESC" />
+      <field name="aap-mainnav-hover-bottom-color" type="color" default="transparent" class="t3tm-color" label="AAP_MAINNAV_HOVER_BOTTOM_COLOR_LABEL" description="AAP_MAINNAV_HOVER_BOTTOM_COLOR_DESC" />
+      <field name="aap-mainnav-hover-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_MAINNAV_HOVER_TEXT_COLOR_LABEL" description="AAP_MAINNAV_HOVER_TEXT_COLOR_DESC" />
+      <field name="aap-mainnav-selected-top-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_MAINNAV_SELECTED_TOP_COLOR_LABEL" description="AAP_MAINNAV_SELECTED_TOP_COLOR_DESC" />
+      <field name="aap-mainnav-selected-bottom-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_MAINNAV_SELECTED_BOTTOM_COLOR_LABEL" description="AAP_MAINNAV_SELECTED_BOTTOM_COLOR_DESC" />
+      <field name="aap-mainnav-selected-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_MAINNAV_SELECTED_TEXT_COLOR_LABEL" description="AAP_MAINNAV_SELECTED_TEXT_COLOR_DESC" />
+      <field name="aap-subnav-bg-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_SUBNAV_BG_COLOR_LABEL" description="AAP_SUBNAV_BG_COLOR_DESC" />
+      <field name="aap-subnav-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_SUBNAV_TEXT_COLOR_LABEL" description="AAP_SUBNAV_TEXT_COLOR_DESC" />
+      <field name="aap-subnav-hover-bg-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_SUBNAV_HOVER_BG_COLOR_LABEL" description="AAP_SUBNAV_HOVER_BG_COLOR_DESC" />
+      <field name="aap-subnav-hover-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_SUBNAV_HOVER_TEXT_COLOR_LABEL" description="AAP_SUBNAV_HOVER_TEXT_COLOR_DESC" />
+      <field name="aap-subnav-selected-bg-color" type="color" default="@menu-color" class="t3tm-color" label="AAP_SUBNAV_SELECTED_BG_COLOR_LABEL" description="AAP_SUBNAV_SELECTED_BG_COLOR_DESC" />
+      <field name="aap-subnav-selected-text-color" type="color" default="@menu-text-color" class="t3tm-color" label="AAP_SUBNAV_SELECTED_TEXT_COLOR_LABEL" description="AAP_SUBNAV_SELECTED_TEXT_COLOR_DESC" />
+    </fieldset>
+
+	<!-- T3_TM_FOOTER is originally from ThemeMagic. -->
+	<fieldset name="footer_params" label="T3_TM_FOOTER">
+	  <field name="aap-footer-border-color" type="color" default="transparent" class="t3tm-color" label="AAP_FOOTER_BORDER_COLOR_LABEL" description="AAP_FOOTER_BORDER_COLOR_DESC" />
+	  <field name="t3-footer-background" type="color" default="@footer-color" class="t3tm-color" label="T3_VARS_FOOTER_BG_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+	  <field name="t3-footer-text-color" type="color" default="@footer-text-color" class="t3tm-color" label="T3_VARS_FOOTER_COLOR_LABEL" description="T3_VARS_FOOTER_COLOR_DESC" />
+	  <field name="t3-footer-module-background" type="color" default="@t3-footer-background" class="t3tm-color" label="T3_VARS_FOOTER_MOD_BG_LABEL" description="T3_VARS_FOOTER_MOD_BG_DESC" />
+	  <field name="t3-footer-module-text-color" type="color" default="@t3-footer-text-color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
+	  <field name="t3-footer-module-title-color" type="color" default="@text-color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_TCOLOR_LABEL" description="T3_VARS_FOOTER_MOD_TCOLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="tab_color_params" label="AAP_SECTION_TAB_COLOR">
+	  <field name="aap-navtab-border-color" type="color" default="@widget-border-color" class="t3tm-color" label="AAP_NAVTAB_BORDER_COLOR_LABEL" description="AAP_NAVTAB_BORDER_COLOR_DESC" />
+	  <field name="aap-navtab-bg-color" type="color" default="mix(black, @page-color, 5%)" class="t3tm-color" label="AAP_NAVTAB_BG_COLOR_LABEL" description="AAP_NAVTAB_BG_COLOR_DESC" />
+	  <field name="aap-navtab-color" type="color" default="mix(white, @page-text-color, 10%)" class="t3tm-color" label="AAP_NAVTAB_COLOR_LABEL" description="AAP_NAVTAB_COLOR_DESC" />
+	  <field name="aap-navtab-hover-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_NAVTAB_HOVER_BG_COLOR_LABEL" description="AAP_NAVTAB_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-navtab-hover-color" type="color" default="mix(white, @page-text-color, 10%)" class="t3tm-color" label="AAP_NAVTAB_HOVER_COLOR_LABEL" description="AAP_NAVTAB_HOVER_COLOR_DESC" />
+	  <field name="aap-navtab-selected-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_NAVTAB_SELECTED_BG_COLOR_LABEL" description="AAP_NAVTAB_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-navtab-selected-color" type="color" default="mix(white, @page-text-color, 27%)" class="t3tm-color" label="AAP_NAVTAB_SELECTED_COLOR_LABEL" description="AAP_NAVTAB_SELECTED_COLOR_DESC" />
+	  <field name="aap-navtab-disabled-bg-color" type="color" default="@aap-disabled-bg-color" class="t3tm-color" label="AAP_NAVTAB_DISABLED_BG_COLOR_LABEL" description="AAP_NAVTAB_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-navtab-disabled-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_NAVTAB_DISABLED_COLOR_LABEL" description="AAP_NAVTAB_DISABLED_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="link_color_params" label="AAP_SECTION_LINK_COLOR">
+	  <field name="aap-link-color" type="color" default="@primary-button-color" class="t3tm-color" label="AAP_LINK_COLOR_LABEL" description="AAP_LINK_COLOR_DESC" />
+	  <field name="aap-link-hover-color" type="color" default="darken(@aap-link-color, 20%)" class="t3tm-color" label="AAP_LINK_HOVER_COLOR_LABEL" description="AAP_LINK_HOVER_COLOR_DESC" />
+	  <field name="aap-link-selected-color" type="color" default="@aap-link-hover-color" class="t3tm-color" label="AAP_LINK_SELECTED_COLOR_LABEL" description="AAP_LINK_SELECTED_COLOR_DESC" />
+	  <field name="aap-link-disabled-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_LINK_DISABLED_COLOR_LABEL" description="AAP_LINK_DISABLED_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="button_color_params" label="AAP_SECTION_BUTTON_COLOR">
+	  <field name="aap-button-border-color" type="color" default="mix(black, @button-color, 19%)" class="t3tm-color" label="AAP_BUTTON_BORDER_COLOR_LABEL" description="AAP_BUTTON_BORDER_COLOR_DESC" />
+	  <field name="aap-button-bg-color" type="color" default="@button-color" class="t3tm-color" label="AAP_BUTTON_BG_COLOR_LABEL" description="AAP_BUTTON_BG_COLOR_DESC" />
+	  <field name="aap-button-text-color" type="color" default="@button-text-color" class="t3tm-color" label="AAP_BUTTON_TEXT_COLOR_LABEL" description="AAP_BUTTON_TEXT_COLOR_DESC" />
+	  <field name="aap-button-hover-border-color" type="color" default="mix(black, @button-color, 33%)" class="t3tm-color" label="AAP_BUTTON_HOVER_BORDER_COLOR_LABEL" description="AAP_BUTTON_HOVER_BORDER_COLOR_DESC" />
+	  <field name="aap-button-hover-bg-color" type="color" default="mix(black, @button-color, 12%)" class="t3tm-color" label="AAP_BUTTON_HOVER_BG_COLOR_LABEL" description="AAP_BUTTON_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-button-hover-text-color" type="color" default="@button-text-color" class="t3tm-color" label="AAP_BUTTON_HOVER_TEXT_COLOR_LABEL" description="AAP_BUTTON_HOVER_TEXT_COLOR_DESC" />
+	  <field name="aap-button-selected-border-color" type="color" default="mix(black, @button-color, 33%)" class="t3tm-color" label="AAP_BUTTON_SELECTED_BORDER_COLOR_LABEL" description="AAP_BUTTON_SELECTED_BORDER_COLOR_DESC" />
+	  <field name="aap-button-selected-bg-color" type="color" default="mix(black, @button-color, 12%)" class="t3tm-color" label="AAP_BUTTON_SELECTED_BG_COLOR_LABEL" description="AAP_BUTTON_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-button-selected-text-color" type="color" default="@button-text-color" class="t3tm-color" label="AAP_BUTTON_SELECTED_TEXT_COLOR_LABEL" description="AAP_BUTTON_SELECTED_TEXT_COLOR_DESC" />
+	  <field name="aap-button-disabled-border-color" type="color" default="@aap-disabled-border-color" class="t3tm-color" label="AAP_BUTTON_DISABLED_BORDER_COLOR_LABEL" description="AAP_BUTTON_DISABLED_BORDER_COLOR_DESC" />
+	  <field name="aap-button-disabled-bg-color" type="color" default="@aap-disabled-bg-color" class="t3tm-color" label="AAP_BUTTON_DISABLED_BG_COLOR_LABEL" description="AAP_BUTTON_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-button-disabled-text-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_BUTTON_DISABLED_TEXT_COLOR_LABEL" description="AAP_BUTTON_DISABLED_TEXT_COLOR_DESC" />
+	  <field name="aap-primary-button-border-color" type="color" default="mix(black, @primary-button-color, 43%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_BORDER_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_BORDER_COLOR_DESC" />
+	  <field name="aap-primary-button-bg-color" type="color" default="@primary-button-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_BG_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_BG_COLOR_DESC" />
+	  <field name="aap-primary-button-text-color" type="color" default="@primary-button-text-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_TEXT_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_TEXT_COLOR_DESC" />
+	  <field name="aap-primary-button-hover-border-color" type="color" default="mix(black, @primary-button-color, 63%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_HOVER_BORDER_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_HOVER_BORDER_COLOR_DESC" />
+	  <field name="aap-primary-button-hover-bg-color" type="color" default="mix(white, @primary-button-color, 19%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_HOVER_BG_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-primary-button-hover-text-color" type="color" default="@primary-button-text-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_HOVER_TEXT_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_HOVER_TEXT_COLOR_DESC" />
+	  <field name="aap-primary-button-selected-border-color" type="color" default="mix(black, @primary-button-color, 63%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_SELECTED_BORDER_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_SELECTED_BORDER_COLOR_DESC" />
+	  <field name="aap-primary-button-selected-bg-color" type="color" default="@primary-button-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_SELECTED_BG_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-primary-button-selected-text-color" type="color" default="@primary-button-text-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_SELECTED_TEXT_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_SELECTED_TEXT_COLOR_DESC" />
+	  <field name="aap-primary-button-disabled-border-color" type="color" default="mix(@page-color, contrast(@page-color), 30%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_DISABLED_BORDER_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_DISABLED_BORDER_COLOR_DESC" />
+	  <field name="aap-primary-button-disabled-bg-color" type="color" default="mix(@page-color, contrast(@page-color), 46%)" class="t3tm-color" label="AAP_PRIMARY_BUTTON_DISABLED_BG_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-primary-button-disabled-text-color" type="color" default="@page-text-color" class="t3tm-color" label="AAP_PRIMARY_BUTTON_DISABLED_TEXT_COLOR_LABEL" description="AAP_PRIMARY_BUTTON_DISABLED_TEXT_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="dropdown_color_params" label="AAP_SECTION_DROPDOWN_COLOR">
+	  <field name="aap-dropdown-border-color" type="color" default="@widget-border-color" class="t3tm-color" label="AAP_DROPDOWN_BORDER_COLOR_LABEL" description="AAP_DROPDOWN_BORDER_COLOR_DESC" />
+	  <field name="aap-dropdown-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_DROPDOWN_BG_COLOR_LABEL" description="AAP_DROPDOWN_BG_COLOR_DESC" />
+	  <field name="aap-dropdown-text-color" type="color" default="mix(black, @neutral-color, 69%)" class="t3tm-color" label="AAP_DROPDOWN_TEXT_COLOR_LABEL" description="AAP_DROPDOWN_TEXT_COLOR_DESC" />
+	  <field name="aap-dropdown-hover-bg-color" type="color" default="mix(black, @page-color, 4%)" class="t3tm-color" label="AAP_DROPDOWN_HOVER_BG_COLOR_LABEL" description="AAP_DROPDOWN_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-dropdown-hover-text-color" type="color" default="mix(black, @neutral-color, 69%)" class="t3tm-color" label="AAP_DROPDOWN_HOVER_TEXT_COLOR_LABEL" description="AAP_DROPDOWN_HOVER_TEXT_COLOR_DESC" />
+	  <field name="aap-dropdown-selected-bg-color" type="color" default="mix(black, @page-color, 11%)" class="t3tm-color" label="AAP_DROPDOWN_SELECTED_BG_COLOR_LABEL" description="AAP_DROPDOWN_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-dropdown-selected-text-color" type="color" default="mix(black, @brand-color, 30%)" class="t3tm-color" label="AAP_DROPDOWN_SELECTED_TEXT_COLOR_LABEL" description="AAP_DROPDOWN_SELECTED_TEXT_COLOR_DESC" />
+	  <field name="aap-dropdown-disabled-bg-color" type="color" default="@aap-dropdown-bg-color" class="t3tm-color" label="AAP_DROPDOWN_DISABLED_BG_COLOR_LABEL" description="AAP_DROPDOWN_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-dropdown-disabled-text-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_DROPDOWN_DISABLED_TEXT_COLOR_LABEL" description="AAP_DROPDOWN_DISABLED_TEXT_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="field_color_params" label="AAP_SECTION_FIELD_COLOR">
+	  <field name="aap-field-border-color" type="color" default="darken(@aap-border-color, 25%)" class="t3tm-color" label="AAP_FIELD_BORDER_COLOR_LABEL" description="AAP_FIELD_BORDER_COLOR_DESC" />
+	  <field name="aap-field-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_FIELD_BG_COLOR_LABEL" description="AAP_FIELD_BG_COLOR_DESC" />
+	  <field name="aap-field-hover-border-color" type="color" default="darken(@aap-border-color, 50%)" class="t3tm-color" label="AAP_FIELD_HOVER_BORDER_COLOR_LABEL" description="AAP_FIELD_HOVER_BORDER_COLOR_DESC" />
+	  <field name="aap-field-disabled-border-color" type="color" default="@aap-disabled-border-color" class="t3tm-color" label="AAP_FIELD_DISABLED_BORDER_COLOR_LABEL" description="AAP_FIELD_DISABLED_BORDER_COLOR_DESC" />
+	  <field name="aap-field-disabled-bg-color" type="color" default="@aap-disabled-bg-color" class="t3tm-color" label="AAP_FIELD_DISABLED_BG_COLOR_LABEL" description="AAP_FIELD_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-field-disabled-text-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_FIELD_DISABLED_TEXT_COLOR_LABEL" description="AAP_FIELD_DISABLED_TEXT_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="table_color_params" label="AAP_SECTION_TABLE_COLOR">
+	  <field name="aap-table-border-color" type="color" default="@table-border-color" class="t3tm-color" label="AAP_TABLE_BORDER_COLOR_LABEL" description="AAP_TABLE_BORDER_COLOR_DESC" />
+	  <field name="aap-th-bg-color" type="color" default="@table-header-color" class="t3tm-color" label="AAP_TH_BG_COLOR_LABEL" description="AAP_TH_BG_COLOR_DESC" />
+	  <field name="aap-th-text-color" type="color" default="@table-header-text-color" class="t3tm-color" label="AAP_TH_TEXT_COLOR_LABEL" description="AAP_TH_TEXT_COLOR_DESC" />
+	  <field name="aap-th-hover-bg-color" type="color" default="darken(@table-header-color, 4%)" class="t3tm-color" label="AAP_TH_HOVER_BG_COLOR_LABEL" description="AAP_TH_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-th-hover-text-color" type="color" default="@table-header-text-color" class="t3tm-color" label="AAP_TH_HOVER_TEXT_COLOR_LABEL" description="AAP_TH_HOVER_TEXT_COLOR_DESC" />
+	  <field name="aap-th-selected-bg-color" type="color" default="darken(@table-header-color, 7%)" class="t3tm-color" label="AAP_TH_SELECTED_BG_COLOR_LABEL" description="AAP_TH_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-th-selected-text-color" type="color" default="@table-header-text-color" class="t3tm-color" label="AAP_TH_SELECTED_TEXT_COLOR_LABEL" description="AAP_TH_SELECTED_TEXT_COLOR_DESC" />
+	  <field name="aap-tr-odd-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_TR_ODD_BG_COLOR_LABEL" description="AAP_TR_ODD_BG_COLOR_DESC" />
+	  <field name="aap-tr-even-bg-color" type="color" default="@page-color" class="t3tm-color" label="AAP_TR_EVEN_BG_COLOR_LABEL" description="AAP_TR_EVEN_BG_COLOR_DESC" />
+	  <field name="aap-tr-text-color" type="color" default="@page-text-color" class="t3tm-color" label="AAP_TR_TEXT_COLOR_LABEL" description="AAP_TR_TEXT_COLOR_DESC" />
+	  <field name="aap-tr-hover-bg-color" type="color" default="mix(white, @brand-color, 80%)" class="t3tm-color" label="AAP_TR_HOVER_BG_COLOR_LABEL" description="AAP_TR_HOVER_BG_COLOR_DESC" />
+	  <field name="aap-tr-hover-text-color" type="color" default="mix(white, @page-text-color, 10%)" class="t3tm-color" label="AAP_TR_HOVER_TEXT_COLOR_LABEL" description="AAP_TR_HOVER_TEXT_COLOR_DESC" />
+	  <field name="aap-tr-selected-bg-color" type="color" default="lighten(@neutral-color, 5%)" class="t3tm-color" label="AAP_TR_SELECTED_BG_COLOR_LABEL" description="AAP_TR_SELECTED_BG_COLOR_DESC" />
+	  <field name="aap-tr-selected-text-color" type="color" default="@page-text-color" class="t3tm-color" label="AAP_TR_SELECTED_TEXT_COLOR_LABEL" description="AAP_TR_SELECTED_TEXT_COLOR_DESC" />
+	  <field name="aap-tr-disabled-bg-color" type="color" default="@aap-tr-odd-bg-color" class="t3tm-color" label="AAP_TR_DISABLED_BG_COLOR_LABEL" description="AAP_TR_DISABLED_BG_COLOR_DESC" />
+	  <field name="aap-tr-disabled-text-color" type="color" default="@aap-disabled-text-color" class="t3tm-color" label="AAP_TR_DISABLED_TEXT_COLOR_LABEL" description="AAP_TR_DISABLED_TEXT_COLOR_DESC" />
+	</fieldset>
+
+	<!-- Reuse the following from ThemeMagic. Defaults may have changed. -->
+
+    <fieldset name="module_params" label="T3_TM_MODULE">
+      <field name="t3-module-bg" type="color" default="transparent" class="t3tm-color" label="T3_TM_VARS_MODULE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_BGCOLOR_DESC" />
+      <field name="t3-module-color" type="color" default="inherit" class="t3tm-color" label="T3_TM_VARS_MODULE_COLOR_LABEL" description="T3_TM_VARS_MODULE_COLOR_DESC" />
+      <field name="t3-module-title-bg" type="color" default="@t3-module-bg" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_BGCOLOR_DESC" />
+      <field name="t3-module-title-color" type="color" default="@t3-module-color" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_COLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_COLOR_DESC" />
+    </fieldset>
+
+	<fieldset name="spotlight_params" label="T3_TM_SPOTLIGHT">
+	  <field name="t3-spotlight-background" type="color" default="@aap-box-bg-color" class="t3tm-color" label="T3_TM_VARS_SPL_BGCOLOR_LABEL" description="T3_TM_VARS_SPL_BGCOLOR_DESC" />
+	  <field name="t3-spotlight-text-color" type="color" default="@aap-text-color" class="t3tm-color" label="T3_TM_VARS_SPL_COLOR_LABEL" description="T3_TM_VARS_SPL_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="visual_params" label="T3_TM_VISUAL">
+	  <!-- Defaults have been changed to square corners -->
+	  <field name="border-radius-base" type="text" default="0px" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_BASE_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_BASE_DESC" />
+	  <field name="border-radius-large" type="text" default="0px" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_LARGE_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_LARGE_DESC" />
+	  <field name="border-radius-small" type="text" default="0px" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_SMALL_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_SMALL_DESC" />
+	</fieldset>
+
+    <fieldset name="grid_params" label="T3_TM_GRID">
+      <field name="container-lg" type="text" default="1170px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_LG_WIDTH_LABEL" description="T3_TM_VARS_SCFD_LG_WIDTH_DESC" />
+      <field name="container-md" type="text" default="970px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_MID_WIDTH_LABEL" description="T3_TM_VARS_SCFD_MID_WIDTH_DESC" />
+      <field name="container-sm" type="text" default="750px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_SM_WIDTH_LABEL" description="T3_TM_VARS_SCFD_SM_WIDTH_DESC" />
+      <field name="grid-gutter-width" type="text" default="30px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_GUTTER_LABEL" description="T3_TM_VARS_SCFD_GUTTER_DESC" />
+    </fieldset>
+
+  </fields>
+</form>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_APIPORTAL_TITLE_LIST_VIEW_APICATALOG" option="View">
+        <message>COM_APIPORTAL_TITLE_LIST_VIEW_APICATALOG_DESC</message>
+	</layout>
+		<fields name="params">
+			<fieldset label="API Catalog" name="params">
+				    <field
+							id="apiCatlogDefaultView"
+							name="apiCatlogDefaultView"
+							type="list"
+							label="COM_APIPORTAL_APICATALOG_DEFAULT_VIEW"
+							description="COM_APIPORTAL_APICATALOG_DEFAULT_DESCRIPTION"
+							default="list"
+							class="btn-group btn-group-yesno"
+							>
+						<option value="list">COM_APIPORTAL_LIST_VIEW_APICATALOG</option>
+						<option value="tiles">COM_APIPORTAL_TILES_VIEW_APICATALOG</option>
+					</field>
+					<field
+				            id="swagger"
+				            name="swagger"
+				            type="radio"
+				            label="COM_APIPORTAL_SHOW_SWAGGER_BUTTON_DOWNLOAD_APICATALOG"
+				            description="COM_APIPORTAL_SHOW_SWAGGER_BUTTON_DOWNLOAD_APICATALOG_DESC"
+				            default="1"
+				            class="btn-group btn-group-yesno"
+				            >
+				        <option value="1" yes="JYES">COM_APIPORTAL_YES_OPTION_APICATALOG</option>
+				        <option value="0">COM_APIPORTAL_NO_OPTION_APICATALOG</option>
+				    </field>
+					<field
+				            id="clientSdk"
+				            name="clientSdk"
+				            type="radio"
+				            label="COM_APIPORTAL_SHOW_SDK_BUTTON_DOWNLOAD_APICATALOG"
+				            description="COM_APIPORTAL_SHOW_SDK_BUTTON_DOWNLOAD_APICATALOG_DESC"
+				            default="0"
+				            class="btn-group btn-group-yesno"
+				            >
+				        <option value="1" yes="JYES">COM_APIPORTAL_YES_OPTION_APICATALOG</option>
+				        <option value="0">COM_APIPORTAL_NO_OPTION_APICATALOG</option>
+				      </field>
+				      
+				      <field
+				            id="hideTags"
+				            name="hideTags"
+				            type="text"
+				            label="COM_APIPORTAL_HIDE_TAGS_APICATALOG"
+				            description="COM_APIPORTAL_HIDE_TAGS_APICATALOG_DESCRIPTION"
+			       
+				            >
+					  </field>
+					   <field
+				            id="showTags"
+				            name="showTags"
+				            type="text"
+				            label="COM_APIPORTAL_LIST_TAGS_APICATALOG"
+				            description="COM_APIPORTAL_LIST_TAGS_APICATALOG_DESCRIPTION"
+			       
+				            >
+					  </field>
+					  <field
+							name="enableInlineTryIt"
+							type="list"
+							label="COM_APIPORTAL_SHOW_IN_LINE_TRY_IT_LABEL"
+							description="COM_APIPORTAL_SHOW_IN_LINE_TRY_IT_DESCRIPTION"
+							default="1"
+							>
+							<option value="1">COM_APIPORTAL_SHOW_IN_LINE_TRY_IT_OPTION_YES</option>
+							<option value="2">COM_APIPORTAL_SHOW_IN_LINE_TRY_IT_OPTION_YES_TO_REGISTED</option>
+							<option value="3">COM_APIPORTAL_SHOW_IN_LINE_TRY_IT_OPTION_NO</option>
+						</field>
+					  
+			</fieldset>
+		</fields>
+</metadata>

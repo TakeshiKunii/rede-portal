@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING" option="View">
+      <message>COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_DESC</message>
+    </layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="usage"
+                type="list"
+                label="COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_USAGE"
+                description="COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_USAGE_DESC"
+                default="app"
+              >
+              <option value="app">COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_USAGE_APP</option>
+              <option value="api">COM_APIPORTAL_TITLE_LIST_VIEW_MONITORING_USAGE_API</option>
+            </field>
+            <field
+                name="ep"
+                type="hidden"
+                default="mainmenu"
+            >
+            </field>
+        </fieldset>
+    </fields>
+</metadata>
